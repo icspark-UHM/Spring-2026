@@ -8,49 +8,68 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-<!-- Masthead / Hero -->
 <header class="hero">
   <nav class="nav">
     <div class="brand">
-      <img src="img/logo-rocket.svg" alt="ICSpark Logo" class="logo" />
-      <span class="brand-text">ICSpark Web Development Classr...</span>
+      <img src="imgs/logo_rocket.svg" alt="ICSpark Logo" class="logo" />
+      <span class="brand-text">ICSpark Web Development</span>
     </div>
     <button class="nav-toggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#regular">Regular</a></li>
-      <li><a href="#advanced">Advanced</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="regular.html">Regular</a></li>
+      <li><a href="advanced.html">Advanced</a></li>
+      <li><a href="about.html">About Us</a></li>
     </ul>
   </nav>
   <div class="hero-overlay">
-    <h1>Welcome</h1>
+    <h1>Welcome to ICSpark Classroom</h1>
   </div>
 </header>
 
-<!-- Info + First Row of Cards -->
 <main class="content">
-  <section class="grid-row">
-    <div class="card placeholder">
-      <button class="add-btn" aria-label="Add new item">+</button>
+  <!-- First row: Picture + Updates -->
+  <section class="first-row">
+    <div class="card picture-card">
+      <!-- Replace with your actual image -->
+      <img src="imgs/classroom.jpg" alt="Classroom Picture" />
     </div>
-
-    <article class="card info" id="info-card">
-      <h2>Information and Updates</h2>
-      <p class="meta">Last modified: <span id="last-modified">6/5/2025</span></p>
-      <div class="editable" contenteditable="true" data-placeholder="Click to edit text">
-        <!-- User-entered text goes here -->
+    <div class="card updates-card">
+      <h2>Information &amp; Updates</h2>
+      <p class="meta">Last updated: <span id="last-modified">6/5/2025</span></p>
+      <div class="updates-text">
+        <!-- Your update text here -->
+        Welcome back! Check out the new module on React next week.
       </div>
-      <div class="save-status" id="save-status" aria-live="polite"></div>
-    </article>
+    </div>
   </section>
 
-  <!-- Additional Rows -->
+  <!-- Second row: Quick Links bar -->
+  <section class="quick-links-section">
+    <div class="card full-width">
+      <h3>Quick Links</h3>
+    </div>
+  </section>
+
+  <!-- Third row: 3 Cards -->
   <section class="grid-row">
-    <div class="card placeholder"></div>
-    <div class="card placeholder"></div>
-    <div class="card placeholder"></div>
+    <div class="card">
+      <h3>Modules</h3>
+      <p>Browse all course modules.</p>
+      <a href="modules.html">Go →</a>
+    </div>
+    <div class="card">
+      <h3>Syllabus / Rules</h3>
+      <p>Read the classroom syllabus and rules.</p>
+      <a href="syllabus.html">Go →</a>
+    </div>
+    <div class="card">
+      <h3>Showcase</h3>
+      <p>See student projects and highlights.</p>
+      <a href="showcase.html">Go →</a>
+    </div>
   </section>
 </main>
 

@@ -8,41 +8,51 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+<!-- Masthead / Hero -->
 <header class="hero">
   <nav class="nav">
     <div class="brand">
       <img src="imgs/logo_rocket.svg" alt="ICSpark Logo" class="logo" />
-      <span class="brand-text">ICSpark Web Development</span>
+      <span class="brand-text">ICSpark Web Development Classr...</span>
     </div>
     <button class="nav-toggle" aria-label="Toggle navigation">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="regular.html">Regular</a></li>
       <li><a href="advanced.html">Advanced</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
   </nav>
   <div class="hero-overlay">
-    <h1>Welcome to ICSpark Classroom</h1>
+    <h1>Welcome</h1>
   </div>
 </header>
 
+<!-- Info + First Row of Cards -->
 <main class="content">
-  <article class="card">
-    <h2>Overview</h2>
-    <p>Deep dive into React, Node.js, databases, and modern tooling.</p>
-  </article>
-  <article class="card">
-    <h2>Modules</h2>
-    <ul>
-      <li>Module 1: React & State Management</li>
-      <li>Module 2: REST & GraphQL APIs</li>
-      <li>Module 3: CI/CD & Deployment</li>
-      <!-- … -->
-    </ul>
-  </article>
+  <section class="grid-row">
+    <div class="card placeholder">
+      <button class="add-btn" aria-label="Add new item">+</button>
+    </div>
+
+    <article class="card info" id="info-card">
+      <h2>Information and Updates</h2>
+      <p class="meta">Last modified: <span id="last-modified">6/5/2025</span></p>
+      <div class="editable" contenteditable="true" data-placeholder="Click to edit text">
+        <!-- User-entered text goes here -->
+      </div>
+      <div class="save-status" id="save-status" aria-live="polite"></div>
+    </article>
+  </section>
+
+  <!-- Additional Rows -->
+  <section class="grid-row">
+    <div class="card placeholder"></div>
+    <div class="card placeholder"></div>
+    <div class="card placeholder"></div>
+  </section>
 </main>
 
 <footer class="footer">
