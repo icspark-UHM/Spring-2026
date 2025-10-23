@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ICSpark Web Development Classroom</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="class/class.css" />
+  <link rel="icon" href="imgs/logo_rocket.svg" type="image/svg+xml" />
+  <script defer src="script.js"></script>
+  <script defer src="class/class.js"></script>
+</head>
+<body>
+<!-- shared header will be injected here -->
+<div data-include="partials/header.html"></div>
+
+<!-- Class weeks grid + modal -->
+<main class="content">
+  <section class="weeks-grid" aria-label="Class weeks">
+    <!-- 14 week cards -->
+    <script>
+      // generated server-side replacement for static HTML fallback when JS disabled
+    </script>
+    <!-- cards are inserted by HTML below (for accessibility / no-JS) -->
+    <div class="grid-wrapper" id="weeks-container">
+      <!-- Week cards will be rendered here by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Modal for week details -->
+  <div id="week-modal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-dismiss="modal"></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" aria-label="Close">×</button>
+      <h2 id="modal-title">Week title</h2>
+      <p id="modal-desc">Description for the week will appear here.</p>
+  <p class="modal-meta">This is a placeholder for the specific GitHub repo we are using.</p>
+  <p class="modal-project">Project Link: <span id="modal-project">Coming Soon</span></p>
+  <p class="modal-zoom">Zoom recording: <em id="modal-zoom">Coming soon</em></p>
+    </div>
+  </div>
+</main>
+<!-- shared footer will be injected here -->
+<div data-include="partials/footer.html"></div>
+</body>
+</html>

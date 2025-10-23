@@ -208,6 +208,9 @@ body {
   gap: 2.2rem;
 }
 
+
+
+
 /* Cards */
 .card {
   background: var(--card-bg);
@@ -241,6 +244,45 @@ body {
 }
 .card a:hover {
   text-decoration: underline;
+}
+
+/* About page styles */
+.about-section {
+  margin-bottom: 4rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-section:last-child {
+  margin-bottom: 0;
+}
+.about-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.team-card, .contact-card {
+  height: 100%;
+  text-align: left;
+}
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.contact-list li {
+  margin-bottom: 0.5rem;
+}
+.contact-list strong {
+  display: inline-block;
+  width: 100px;
+}
+/* Center the grid container */
+.about-section .grid-row {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* FOOTER */
