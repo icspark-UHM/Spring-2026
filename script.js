@@ -3,16 +3,41 @@ async function loadIncludes() {
   const includeEls = Array.from(document.querySelectorAll('[data-include]'));
   await Promise.all(includeEls.map(async el => {
     const url = el.getAttribute('data-include');
-    try {
-      const res = await fetch(url, { cache: 'no-store' });
-      if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
-      const text = await res.text();
-      el.innerHTML = text;
-      el.removeAttribute('data-include');
-    } catch (err) {
-      // Graceful fallback: show a small error but don't break the page
-      el.innerHTML = `<!-- include failed: ${err.message} -->`;
-      console.error(err);
+    // Resolve include URL robustly against the current page directory so
+    // paths work both locally and on GitHub Pages (project pages).
+    const pageBaseDir = window.location.pathname.replace(/\/[^/]*$/, '/');
+    const originBase = window.location.origin + pageBaseDir;
+
+    const candidates = [
+      // primary: resolve against the current page directory (keeps repo prefix)
+      new URL(url, originBase).href,
+      // fallback: resolve against document.baseURI
+      new URL(url, document.baseURI).href,
+      // fallback: try a relative-safe variant
+      new URL('./' + url, document.baseURI).href
+    ];
+
+    let lastErr = null;
+    for (const candidate of candidates) {
+      try {
+        const res = await fetch(candidate, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`Failed to load ${candidate}: ${res.status}`);
+        const text = await res.text();
+        el.innerHTML = text;
+        el.removeAttribute('data-include');
+        lastErr = null;
+        break;
+      } catch (err) {
+        lastErr = err;
+        // try next candidate
+        console.debug('include fetch failed for', candidate, err && err.message);
+      }
+    }
+
+    if (lastErr) {
+      // final graceful fallback: annotate the element and keep the page usable
+      el.innerHTML = `<!-- include failed for ${url}: ${lastErr.message} -->`;
+      console.error('All include fetch attempts failed for', url, lastErr);
     }
   }));
 }
