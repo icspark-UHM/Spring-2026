@@ -21,9 +21,9 @@ const weeksData: WeekData[] = [
   { week: 9, title: 'Week 9: 3/21', desc: 'SPRING BREAK', project: null, zoom: null },
   { week: 10, title: 'Week 10: 3/28', desc: 'Node.js and simple servers.', project: null, zoom: null },
   { week: 11, title: 'Week 11: 4/4', desc: 'Databases basics.', project: null, zoom: null },
-  { week: 12, title: 'Week 12: ', desc: 'Testing and quality.', project: null, zoom: null },
-  { week: 13, title: 'Week 13: ', desc: 'Deployment and CI/CD.', project: null, zoom: null },
-  { week: 14, title: 'Week 14: ', desc: 'Final projects and showcase.', project: null, zoom: null }
+  { week: 12, title: 'Week 12: 4/11', desc: 'Testing and quality.', project: null, zoom: null },
+  { week: 13, title: 'Week 13: 4/18', desc: 'Deployment and CI/CD.', project: null, zoom: null },
+  { week: 14, title: 'Week 14: 4/25', desc: 'Final projects and showcase.', project: null, zoom: null }
 ];
 
 function Class() {
