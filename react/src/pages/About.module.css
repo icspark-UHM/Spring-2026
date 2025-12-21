@@ -1,0 +1,46 @@
+/* About page styles */
+.aboutSection {
+  margin-bottom: 4rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutSection:last-child {
+  margin-bottom: 0;
+}
+
+.aboutSection h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.teamCard,
+.contactCard {
+  height: 100%;
+  text-align: left;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.contactList li {
+  margin-bottom: 0.5rem;
+}
+
+.contactList strong {
+  display: inline-block;
+  width: 100px;
+}
+
+/* Center the grid container */
+.aboutSection .gridRow {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
