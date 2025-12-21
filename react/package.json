@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://icspark-uhm.github.io/Spring-2026/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
