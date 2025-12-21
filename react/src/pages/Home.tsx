@@ -1,32 +1,31 @@
 import { Link } from 'react-router-dom';
-import styles from './Home.module.css';
 
 function Home() {
   return (
     <main className="content">
       {/* First row: Picture + Updates */}
-      <section className={styles.firstRow}>
-        <div className={`card ${styles.pictureCard}`}>
+      <section className="first-row">
+        <div className="card picture-card">
           <img src="/imgs/classroom.jpg" alt="Classroom Picture" />
         </div>
-        <div className={`card ${styles.updatesCard}`}>
+        <div className="card updates-card">
           <h2>Information &amp; Updates</h2>
           <p className="meta">Last updated: <span>6/5/2025</span></p>
-          <div className={styles.updatesText}>
+          <div className="updates-text">
             Welcome back! Check out the new module on React next week.
           </div>
         </div>
       </section>
 
       {/* Second row: Quick Links bar */}
-      <section className={styles.quickLinksSection}>
-        <div className={`card ${styles.fullWidth}`}>
+      <section className="quick-links-section">
+        <div className="card full-width">
           <h3>Quick Links</h3>
         </div>
       </section>
 
-      {/* Third row: 3 Cards */}
-      <section className="gridRow">
+      {/* Third row: 3 Cards - Updated Links */}
+      <section className="grid-row">
         <div className="card">
           <h3>Modules</h3>
           <p>Browse all course modules.</p>
@@ -35,12 +34,12 @@ function Home() {
         <div className="card">
           <h3>Syllabus / Rules</h3>
           <p>Read the classroom syllabus and rules.</p>
-          <a href="#syllabus">Go →</a>
+          <Link to="/syllabus">Go →</Link>
         </div>
         <div className="card">
           <h3>Showcase</h3>
           <p>See student projects and highlights.</p>
-          <a href="#showcase">Go →</a>
+          <Link to="/showcase">Go →</Link>
         </div>
       </section>
     </main>
