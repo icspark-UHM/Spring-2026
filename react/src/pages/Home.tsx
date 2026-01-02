@@ -6,14 +6,50 @@ function Home() {
       {/* First row: Picture + Updates */}
       <section className="first-row">
         <div className="card picture-card">
-          <img src="/imgs/classroom.jpg" alt="Classroom Picture" />
+          {/*<img src="public/imgs/classroom.svg" alt="Classroom Picture" />*/}
+          <iframe
+            src="public/files/classroom.pdf"
+            width="100%"
+            height="800px"
+            style={{ border: 'none', borderRadius: 'var(--radius)' }}
+            title="Classroom PDF"
+          />
         </div>
         <div className="card updates-card">
           <h2>Information &amp; Updates</h2>
-          <p className="meta">Last updated: <span>6/5/2025</span></p>
-          <div className="updates-text">
-            Welcome back! Check out the new module on React next week.
+
+          {/* Update Card 1 - Most Recent */}
+          <div className="update-item">
+            <p className="update-date">Added 1/10/2026</p>
+            <p className="update-text">
+              Please have{' '}
+              <a
+                href="https://drive.google.com/file/d/1NzW2O4x_pyR02vMxOzit9a3mxP3RFjTG/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Parent-Legal Guardian Consent Waiver Release, Indemnity, and Medical Agreement
+              </a> and <a
+                href="https://docs.google.com/document/d/1xrxqwa-Hp-w6f5gy013AetnNRmWaXL1Q2uriGi1nKhQ/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                2026 Parent-Student Program Agreement
+              </a>
+
+              {' '}signed by the second class period on 2/1.
+            </p>
           </div>
+
+          {/* Add more updates here - they'll stack vertically */}
+          {/*
+          <div className="update-item">
+            <p className="update-date">12/15/2025</p>
+            <p className="update-text">
+              Previous update message here...
+            </p>
+          </div>
+          */}
         </div>
       </section>
 
