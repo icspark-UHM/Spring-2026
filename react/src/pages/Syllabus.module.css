@@ -1,0 +1,14 @@
+.page {
+  width: 100%;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+}
+
+.doc {
+  width: min(100%, 850px);
+  height: 100dvh;
+  border: 0;
+  display: block;
+  margin: 0 auto;
+}
