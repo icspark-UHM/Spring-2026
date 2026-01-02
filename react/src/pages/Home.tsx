@@ -22,19 +22,19 @@ function Home() {
           <div className="update-item">
             <p className="update-date">Added 1/10/2026</p>
             <p className="update-text">
-              Please have{' '}
-              <a
+              Please have{' '} Parent-Legal Guardian Consent Waiver Release, Indemnity, and Medical Agreement&nbsp;
+               <a
                 href="https://drive.google.com/file/d/1NzW2O4x_pyR02vMxOzit9a3mxP3RFjTG/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Parent-Legal Guardian Consent Waiver Release, Indemnity, and Medical Agreement
-              </a> and <a
+                (link)
+              </a> and 2026 Parent-Student Program Agreement <a
                 href="https://docs.google.com/document/d/1xrxqwa-Hp-w6f5gy013AetnNRmWaXL1Q2uriGi1nKhQ/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                2026 Parent-Student Program Agreement
+                (link)
               </a>
 
               {' '}signed by the second class period on 2/1.
