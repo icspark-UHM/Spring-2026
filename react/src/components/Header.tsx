@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
+import  logo from "/public/logo_rocket.svg"
 
 function Header() {
   const [navOpen, setNavOpen] = useState<boolean>(false);
@@ -14,7 +15,7 @@ function Header() {
     <header className={styles.hero}>
       <nav className={styles.nav}>
         <div className={styles.brand}>
-          <img src="/logo_rocket.svg" alt="ICSpark Logo" className={styles.logo} />
+          <img src={logo} alt="ICSpark Logo" className={styles.logo} />
           <span className="brand-text">ICSpark Web Development</span>
         </div>
         <button
