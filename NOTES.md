@@ -168,6 +168,7 @@ npm run lint
 2. **Deploy:**
    ```bash
    cd react
+   npm run build
    npm run deploy
    ```
 
