@@ -46,7 +46,7 @@ This is the official classroom website for ICSpark's Spring 2026 Web Development
 
 ---
 
-## 🎯 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -79,11 +79,10 @@ Before you begin, make sure you have installed:
    http://localhost:5173
    ```
 
-You should see the site running! 🎉
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 react/
