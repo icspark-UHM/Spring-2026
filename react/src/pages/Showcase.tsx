@@ -7,10 +7,10 @@ function Showcase() {
 
   // Placeholder images - replace with your actual showcase photos
   const showcaseImages = [
-    { src: 'public/imgs/showcase/showcase1.jpg', alt: 'Students presenting their projects' },
-    { src: 'public/imgs/showcase/showcase2.JPG', alt: 'Final showcase event' },
-    { src: 'public/imgs/showcase/showcase3.jpeg', alt: 'Project demonstrations' },
-    { src: 'public/imgs/showcase/showcase4.jpeg', alt: 'Team collaboration' },
+    { src: '/imgs/showcase/showcase1.jpg', alt: 'Students presenting their projects' },
+    { src: '/imgs/showcase/showcase2.JPG', alt: 'Final showcase event' },
+    { src: '/imgs/showcase/showcase3.jpeg', alt: 'Project demonstrations' },
+    { src: '/imgs/showcase/showcase4.jpeg', alt: 'Team collaboration' },
   ];
 
   const nextSlide = () => {
