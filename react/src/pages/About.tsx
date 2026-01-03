@@ -7,69 +7,93 @@ function About() {
         <h2>About the Class</h2>
         <div className="card">
           <h3>Web Development Journey</h3>
-          <p>This 14-week intensive course is designed to take you from the basics of web development to building modern, interactive web applications. Whether you're a complete beginner or have some coding experience, our structured curriculum and hands-on approach will help you develop the skills needed in today's tech industry.</p>
-          <p>You'll learn:</p>
-          <ul>
-            <li>HTML5 and modern semantic markup</li>
-            <li>CSS3, including Flexbox and Grid layouts</li>
-            <li>JavaScript fundamentals and DOM manipulation</li>
-            <li>Working with APIs and asynchronous programming</li>
-            <li>React basics and state management</li>
-            <li>Backend concepts with Node.js</li>
-            <li>Database fundamentals</li>
-            <li>Deployment and basic DevOps</li>
-          </ul>
+          <p>This 14-week intensive course is designed to take you from the basics of web development to building modern,
+            interactive web applications. Whether you're a complete beginner or have some coding experience, our structured
+            curriculum and hands-on approach will help you develop the skills needed in today's tech industry.</p>
         </div>
       </section>
 
-      {/* About the Team */}
+      {/* What You'll Learn Section */}
+      <section className="about-section">
+        <h2>What You'll Learn</h2>
+        <div className="grid-row three-col">
+          <div className="card feature-card">
+            <h3>Frontend Development</h3>
+            <p>HTML, CSS, JavaScript, and modern frameworks like React</p>
+          </div>
+          <div className="card feature-card">
+            <h3>Web Design</h3>
+            <p>Responsive layouts, animations, and user-friendly interfaces</p>
+          </div>
+          <div className="card feature-card">
+            <h3>Real Projects</h3>
+            <p>Build a portfolio website and showcase your skills</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet Our Team Section */}
       <section className="about-section">
         <h2>Meet Our Team</h2>
-        <div className="grid-row">
-          <div className="card team-card">
-            <h3>Instructors</h3>
-            <p>Our instructors are experienced developers and educators passionate about teaching and mentoring the next generation of web developers. They bring real-world experience and practical insights to every lesson.</p>
-            <p>Each instructor specializes in different aspects of web development, ensuring you get expert guidance throughout the course.</p>
+        <div className="grid-row two-col">
+          <div className="card team-card highlight-card">
+            <div className="card-header">
+              <h3>Mentors</h3>
+            </div>
+            <p>
+              Our mentors are excited to help guide you develop your own website and add to your resume.
+              They are volunteers ranging from freshmen to graduate students in computer science or related
+              field. Please feel free to ask them about college!
+            </p>
+            <a
+              href="https://icspark.github.io/people.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-link"
+            >
+              Meet This Year's Mentors →
+            </a>
           </div>
-          <div className="card team-card">
-            <h3>Teaching Assistants</h3>
-            <p>Our TAs are here to support your learning journey. They provide one-on-one help during lab sessions, review your code, and offer additional explanations when needed.</p>
-            <p>Many of our TAs are former students who excelled in the course and now help others succeed.</p>
-          </div>
-          <div className="card team-card">
-            <h3>Student Success Team</h3>
-            <p>The success team ensures you have all the resources you need to excel in the course. They coordinate study groups, maintain the learning platform, and organize special events.</p>
+
+          <div className="card team-card highlight-card">
+            <div className="card-header">
+              <h3>Technology Outreach Hawaii (TORCH)</h3>
+            </div>
+            <p>
+              We are part of a 501c3 non-profit organization promoting technology education in Hawaii
+              known as TORCH. They are dedicated to push STEM education and access to the islands.
+            </p>
+            <a
+              href="https://hitorch.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-link"
+            >
+              Learn More About TORCH →
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Contact Officers */}
+      {/* Contact Section */}
       <section className="about-section">
-        <h2>Contact Our Officers</h2>
-        <div className="grid-row">
-          <div className="card contact-card">
-            <h3>Course Director</h3>
-            <p>For curriculum and course structure questions:</p>
-            <ul className="contact-list">
-              <li><strong>Email:</strong> director@icspark.org</li>
-              <li><strong>Office Hours:</strong> Mon/Wed 2-4pm</li>
-            </ul>
-          </div>
-          <div className="card contact-card">
-            <h3>Technical Support</h3>
-            <p>For platform access and technical issues:</p>
-            <ul className="contact-list">
-              <li><strong>Email:</strong> support@icspark.org</li>
-              <li><strong>Discord:</strong> Join our <a href="#">community server</a></li>
-            </ul>
-          </div>
-          <div className="card contact-card">
-            <h3>Student Services</h3>
-            <p>For enrollment and general inquiries:</p>
-            <ul className="contact-list">
-              <li><strong>Email:</strong> services@icspark.org</li>
-              <li><strong>Phone:</strong> (555) 123-4567</li>
-            </ul>
+        <h2>Get In Touch</h2>
+        <div className="contact-container">
+          <div className="card contact-card-large">
+            <div className="contact-header">
+              <h3>ICSpark Board</h3>
+            </div>
+            <p className="contact-subtitle">Have questions or need to report an absence?</p>
+            <div className="contact-details">
+              <div className="contact-item">
+                <strong>Email:</strong>
+                <a href="mailto:info@icspark.org">info@icspark.org</a>
+              </div>
+              <div className="contact-item">
+                <strong>Phone:</strong>
+                <span>Provided during orientation</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

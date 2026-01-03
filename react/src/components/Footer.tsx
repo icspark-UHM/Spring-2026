@@ -5,7 +5,7 @@ function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <p>&copy; {currentYear} ICSpark. All rights reserved.</p>
+      <p>&copy; {currentYear} ICSpark. For education use.</p>
     </footer>
   );
 }

@@ -37,7 +37,7 @@ function Home() {
                 (link)
               </a>
 
-              {' '}signed by the second class period on 2/1.
+              {' '}signed by the second class period on 1/24.
             </p>
           </div>
 
@@ -76,6 +76,11 @@ function Home() {
           <h3>Showcase</h3>
           <p>See student projects and highlights.</p>
           <Link to="/showcase">Go →</Link>
+        </div>
+        <div className="card">
+          <h3>Zoom/Google Meets</h3>
+          <p>Coming Soon</p>
+          {/*<Link to="/showcase">Go →</Link>*/}
         </div>
       </section>
     </main>
