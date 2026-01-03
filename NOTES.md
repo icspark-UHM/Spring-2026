@@ -41,7 +41,7 @@ This is the official classroom website for ICSpark's Spring 2026 Web Development
 - **Home Page** - Course updates and quick navigation
 - **Syllabus Page** - Course policies, grading, and rules
 - **Showcase Page** - Student project gallery
-- ℹ**About Page** - Team and contact information
+- **About Page** - Team and contact information
 
 
 ---
