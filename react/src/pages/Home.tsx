@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import  classroom from "public/files/classroom.pdf";
+import  classroom from "/public/files/classroom.pdf";
 
 function Home() {
   return (
