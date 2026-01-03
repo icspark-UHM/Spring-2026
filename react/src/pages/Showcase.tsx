@@ -1,5 +1,13 @@
 import { useState, useEffect } from 'react';
 import styles from "./Showcase.module.css";
+import showcase1 from "/public/imgs/showcase/showcase1.jpg";
+import showcase2 from "/public/imgs/showcase/showcase2.jpg";
+import showcase3 from "/public/imgs/showcase/showcase3.jpeg";
+import showcase4 from "/public/imgs/showcase/showcase4.jpeg";
+
+
+
+
 
 function Showcase() {
   // Carousel state
@@ -7,10 +15,10 @@ function Showcase() {
 
   // Placeholder images - replace with your actual showcase photos
   const showcaseImages = [
-    { src: '/imgs/showcase/showcase1.jpg', alt: 'Students presenting their projects' },
-    { src: '/imgs/showcase/showcase2.JPG', alt: 'Final showcase event' },
-    { src: '/imgs/showcase/showcase3.jpeg', alt: 'Project demonstrations' },
-    { src: '/imgs/showcase/showcase4.jpeg', alt: 'Team collaboration' },
+    { src: showcase1, alt: '2024 ICSpark Showcase' },
+    { src: showcase2, alt: '2025 ICSpark Showcase 1. Students presenting their projects' },
+    { src: showcase3, alt: '2025 ICSpark Showcase 2. Students presenting their projects' },
+    { src: showcase4, alt: '2025 ICSpark Showcase 3. Students presenting their projects' },
   ];
 
   const nextSlide = () => {

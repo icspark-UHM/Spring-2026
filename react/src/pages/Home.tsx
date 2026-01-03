@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import  classroom from "public/files/classroom.pdf";
 
 function Home() {
   return (
@@ -8,7 +9,7 @@ function Home() {
         <div className="card picture-card">
           {/*<img src="public/imgs/classroom.svg" alt="Classroom Picture" />*/}
           <iframe
-            src="public/files/classroom.pdf"
+            src={classroom}
             width="100%"
             height="800px"
             style={{ border: 'none', borderRadius: 'var(--radius)' }}

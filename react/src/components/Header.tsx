@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
-import  logo from "/public/logo_rocket.svg"
+import  logo from "/public/logo_rocket.svg";
 
 function Header() {
   const [navOpen, setNavOpen] = useState<boolean>(false);
