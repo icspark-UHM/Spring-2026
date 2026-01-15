@@ -80,7 +80,7 @@ function Home() {
         </div>
         <div className="card">
           <h3>Zoom/Google Meets</h3>
-          </a> and 2026 Parent-Student Program Agreement <a
+          <a
                 href="https://us05web.zoom.us/j/86924308150?pwd=TtWecwob9Bx9hjNeIb7D9m7QUIoATJ.1"
                 target="_blank"
                 rel="noopener noreferrer"
