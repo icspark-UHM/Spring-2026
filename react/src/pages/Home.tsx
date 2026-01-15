@@ -80,7 +80,16 @@ function Home() {
         </div>
         <div className="card">
           <h3>Zoom/Google Meets</h3>
-          <p>Coming Soon</p>
+          </a> and 2026 Parent-Student Program Agreement <a
+                href="https://us05web.zoom.us/j/86924308150?pwd=TtWecwob9Bx9hjNeIb7D9m7QUIoATJ.1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join Zoom Meeting
+              </a>
+            <p>Meeting ID: 869 2430 8150</p>
+            <p>Passcode: Please check email for Weekly Reminder</p>
+
           {/*<Link to="/showcase">Go →</Link>*/}
         </div>
       </section>
