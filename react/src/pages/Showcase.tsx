@@ -82,13 +82,13 @@ function Showcase() {
             </div>
             <div className={styles.eventInfoItem}>
               <strong>Location:</strong>
-              <span>POST 318, UH Mānoa</span>
+              <span>Campus Center Ballroom, UH Mānoa</span>
             </div>
           </div>
 
           <div className={styles.eventNotice}>
             <p>
-              <strong>⚠️ Important:</strong> This event is <strong>mandatory</strong> for all students
+              <strong>Important:</strong> This event is <strong>mandatory</strong> for all students
               and is an <strong>in-person event only</strong>.
             </p>
             <p className={styles.eventDisclaimer}>

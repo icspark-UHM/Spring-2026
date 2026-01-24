@@ -13,7 +13,7 @@ interface WeekData {
 
 const weeksData: WeekData[] = [
   { week: 1, title: 'Week 1: 1/17', desc: 'Intro to HTML, CSS, JS', project: null, recording: null, internalLink: '/syllabus' },
-  { week: 2, title: 'Week 2: 1/24', desc: 'Text Editors, File Paths, and Replit', project: null, recording: null },
+  { week: 2, title: 'Week 2: 1/24', desc: 'Text Editors, File Paths, and Replit', project: null, recording: 'https://drive.google.com/drive/folders/1ILZLU6dxPb-1VFmj2tkxd1aAoeubZoei' },
   { week: 3, title: 'Week 3: 2/7', desc: 'CSS Basics and Flexbox', project: null, recording: null },
   { week: 4, title: 'Week 4: 2/14', desc: 'Javascript Variables, Data Types, Operators, and If statements', project: null, recording: null },
   { week: 5, title: 'Week 5: 2/21', desc: 'Functions', project: null, recording: null },
