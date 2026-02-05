@@ -9,6 +9,8 @@ import Showcase from './pages/Showcase';
 import './App.css';
 import About from "./pages/About";
 
+import Hackathon from './pages/Hackathon/Home';
+
 function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
@@ -20,6 +22,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/syllabus" element={<Syllabus />} />
           <Route path="/showcase" element={<Showcase />} />
+          <Route path="/hackathon" element={<Hackathon />} />
         </Routes>
         <Footer />
       </div>

@@ -1,0 +1,404 @@
+/* ==================== */
+/* SHOWCASE PAGE STYLES */
+/* ==================== */
+
+/* Showcase Intro */
+.showcaseIntro {
+  background: linear-gradient(135deg, #fff 0%, #fffdf5 100%);
+  border-left: 5px solid var(--accent);
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.showcaseIntro h3 {
+  margin-top: 0;
+  color: var(--text);
+  font-size: 1.6rem;
+}
+
+.showcaseIntro p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.showcaseIntro a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.showcaseIntro a:hover {
+  color: #d4a929;
+}
+
+/* Event Details Card */
+.eventDetailsCard {
+  background: linear-gradient(135deg, #fffdf5 0%, #fff9e6 100%);
+  border: 2px solid var(--accent);
+  padding: 2.5rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.eventHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.eventIcon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.eventHeader h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--text);
+}
+
+.eventInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.eventInfoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  background: white;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.eventInfoItem strong {
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.eventInfoItem span {
+  color: #555;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.eventNotice {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 2px dashed var(--accent);
+  margin-top: 1.5rem;
+}
+
+.eventNotice p {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.eventNotice p:first-child {
+  margin-top: 0;
+}
+
+.eventNotice p:last-child {
+  margin-bottom: 0;
+}
+
+.eventNotice strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.eventDisclaimer {
+  color: #666;
+  font-style: italic;
+  font-size: 0.95rem !important;
+}
+
+/* Carousel Section */
+.carouselSection {
+  margin: 4rem 0;
+}
+
+.carouselSection h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.carouselContainer {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+.carouselSlide {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #f5f5f5;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.carouselImage:hover {
+  transform: scale(1.02);
+}
+
+/* Carousel Buttons */
+.carouselBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--accent);
+  color: var(--text);
+  font-size: 2.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  line-height: 1;
+  padding: 0;
+  font-weight: 300;
+}
+
+.carouselBtn:hover {
+  background: var(--accent);
+  color: #111;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carouselBtn.prev {
+  left: 1rem;
+}
+
+.carouselBtn.next {
+  right: 1rem;
+}
+
+/* Carousel Dots */
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  background: #bbb;
+  transform: scale(1.2);
+}
+
+.dot.active {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+
+/* Three Column Grid */
+.threeCol {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Feature Card */
+.featureCard {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.featureCard h3 {
+  margin: 0.5rem 0 1rem 0;
+  color: var(--text);
+  font-size: 1.3rem;
+}
+
+.featureCard p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Featured Card */
+.featuredCard {
+  background: linear-gradient(135deg, #fffdf0 0%, #fff9e6 100%);
+  border: 3px solid var(--accent);
+  padding: 2.5rem 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 4px 15px rgba(245, 196, 55, 0.2);
+}
+
+.featuredCard h3 {
+  margin-top: 0;
+  color: var(--text);
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.criteriaList {
+  margin: 1.5rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.criteriaList li {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  background: white;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.criteriaList li:hover {
+  transform: translateX(8px);
+}
+
+.featuredCta {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 1.25rem;
+  background: white;
+  border-radius: var(--radius);
+  text-align: center;
+  border: 2px dashed var(--accent);
+}
+
+.featuredCta a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.featuredCta a:hover {
+  color: #d4a929;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 840px) {
+  .carouselContainer {
+    padding: 1.5rem;
+  }
+
+  .carouselBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+  }
+
+  .carouselBtn.prev {
+    left: 0.5rem;
+  }
+
+  .carouselBtn.next {
+    right: 0.5rem;
+  }
+
+  .eventInfoGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .eventDetailsCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .threeCol {
+    grid-template-columns: 1fr;
+  }
+
+  .featureCard {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .eventHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .eventIcon {
+    font-size: 2rem;
+  }
+
+  .eventHeader h3 {
+    font-size: 1.4rem;
+  }
+
+  .carouselSection h3 {
+    font-size: 1.4rem;
+  }
+
+  .carouselBtn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+
+  .featuredCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .criteriaList li {
+    font-size: 0.95rem;
+  }
+
+  .featureIcon {
+    font-size: 2.5rem;
+  }
+}
