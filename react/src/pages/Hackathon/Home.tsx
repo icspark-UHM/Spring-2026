@@ -1,178 +1,95 @@
-import { useState, useEffect } from 'react';
-import styles from "./Home.module.css";
-import showcase1 from "/public/imgs/showcase/showcase1.jpg";
-import showcase2 from "/public/imgs/showcase/showcase2.jpg";
-import showcase3 from "/public/imgs/showcase/showcase3.jpeg";
-import showcase4 from "/public/imgs/showcase/showcase4.jpeg";
+import { Link } from 'react-router-dom';
+import styles from './Hackathon.module.css';
+import HackathonNav from "../../components/hackathon/HackNav";
 
-
-
-
-
-function Showcase() {
-  // Carousel state
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Placeholder images - replace with your actual showcase photos
-  const showcaseImages = [
-    { src: showcase1, alt: '2024 ICSpark Showcase' },
-    { src: showcase2, alt: '2025 ICSpark Showcase 1. Students presenting their projects' },
-    { src: showcase3, alt: '2025 ICSpark Showcase 2. Students presenting their projects' },
-    { src: showcase4, alt: '2025 ICSpark Showcase 3. Students presenting their projects' },
-  ];
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % showcaseImages.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + showcaseImages.length) % showcaseImages.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  // Auto play: Change slide every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000); // 5 seconds
-
-    // Clean up interval when component unmounts
-    return () => clearInterval(interval);
-  }, [currentSlide]); // Re-run when currentSlide changes
-
+function HackathonHome() {
   return (
-    <main className="content1">
-      <section className="about-section">
-        <h2>Hackathon 2026</h2>
+    <div className={styles.hackathonWrapper}>
+      <HackathonNav />
 
-        {/* What is Final Showcase */}
-        <div className={`card ${styles.showcaseIntro}`}>
-          <h3>What is Final Showcase?</h3>
-          <p>
-            Final Showcase is a way to submit and showcase what you have accomplished this semester.
-            Some featured projects are on our{' '}
-            <a
-              href="https://icspark.github.io/showcase.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              main website
-            </a>
-            , so please check it out!
+      {/* Hero Section with Space Background */}
+      <section className={styles.hero}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>
+            SWITCHing Things Up
+            <br />
+            <span className={styles.heroPresents}>PRESENTS</span>
+          </h1>
+          <div className={styles.partnershipBadge}>
+            <div className={styles.icsparkLogo}>
+              <span className={styles.logoText}>SWITCH</span>
+              <span className={styles.logoSubtext}>Supporting Wellness in Technology Computing Hawaii</span>
+            </div>
+            <span className={styles.plusSign}>+</span>
+            <div className={styles.torchLogo}>
+              <span className={styles.logoText}>ICSpark</span>
+              <span className={styles.logoSubtext}>Web Development Program</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Decorative Space Elements */}
+        <div className={styles.spaceElements}>
+          <div className={styles.planet1}></div>
+          <div className={styles.planet2}></div>
+          <div className={styles.planet3}></div>
+          <div className={styles.stars}></div>
+        </div>
+      </section>
+
+      {/* Welcome Section */}
+      <section className={styles.welcomeSection}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>Welcome to the Hackathon</h2>
+          <p className={styles.welcomeText}>
+            Join us for an exciting web development hackathon where students showcase
+            their skills, creativity, and innovation. This collaborative event brings
+            together ICSpark students and TORCH mentors for an unforgettable learning experience.
           </p>
         </div>
+      </section>
 
-        {/* Event Details Card */}
-        <div className={`card ${styles.eventDetailsCard}`}>
-          <div className={styles.eventHeader}>
-            <h3>Event Details (Save the Date)</h3>
-          </div>
-
-          <div className={styles.eventInfoGrid}>
-            <div className={styles.eventInfoItem}>
-              <strong>Date:</strong>
-              <span>Saturday, April 25, 2026</span>
-            </div>
-            <div className={styles.eventInfoItem}>
-              <strong>Time:</strong>
-              <span>9:30 AM - 12:30 PM</span>
-            </div>
-            <div className={styles.eventInfoItem}>
-              <strong>Location:</strong>
-              <span>Campus Center Ballroom, UH Mānoa</span>
-            </div>
-          </div>
-
-          <div className={styles.eventNotice}>
-            <p>
-              <strong>Important:</strong> This event is <strong>mandatory</strong> for all students
-              and is an <strong>in-person event only</strong>.
-            </p>
-            <p className={styles.eventDisclaimer}>
-              Event details are subject to change. Please check your emails closer to the event
-              for any updates or changes.
-            </p>
-          </div>
-        </div>
-
-        {/* Image Carousel */}
-        <div className={styles.carouselSection}>
-          <h3>Previous Showcases</h3>
-          <div className={styles.carouselContainer}>
-            <button
-              className={`${styles.carouselBtn} ${styles.prev}`}
-              onClick={prevSlide}
-              aria-label="Previous slide"
-            >
-              ‹
-            </button>
-
-            <div className={styles.carouselSlide}>
-              <img
-                src={showcaseImages[currentSlide].src}
-                alt={showcaseImages[currentSlide].alt}
-                className={styles.carouselImage}
-              />
+      {/* Quick Info Cards */}
+      <section className={styles.infoCards}>
+        <div className={styles.container}>
+          <div className={styles.cardGrid}>
+            <div className={styles.infoCard}>
+              <div className={styles.cardIcon}>📅</div>
+              <h3>When</h3>
+              <p>Check the schedule for dates and times</p>
+              <Link to="/hackathon/schedule" className={styles.cardLink}>View Schedule →</Link>
             </div>
 
-            <button
-              className={`${styles.carouselBtn} ${styles.next}`}
-              onClick={nextSlide}
-              aria-label="Next slide"
-            >
-              ›
-            </button>
-
-            {/* Dots Navigation */}
-            <div className={styles.carouselDots}>
-              {showcaseImages.map((_, index) => (
-                <button
-                  key={index}
-                  className={`${styles.dot} ${index === currentSlide ? styles.active : ''}`}
-                  onClick={() => goToSlide(index)}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
+            <div className={styles.infoCard}>
+              <div className={styles.cardIcon}>👥</div>
+              <h3>Who</h3>
+              <p>Meet our talented students and mentors</p>
+              <Link to="/hackathon/students" className={styles.cardLink}>Meet the Team →</Link>
             </div>
-          </div>
-        </div>
 
-        {/* What to Expect */}
-        <h3 style={{ textAlign: 'center', marginTop: '4rem', marginBottom: '2rem', fontSize: '1.8rem' }}>
-          What to Expect
-        </h3>
-
-        <div className={`grid-row ${styles.threeCol}`}>
-          <div className={`card ${styles.featureCard}`}>
-            <h3>Interactive Websites</h3>
-            <p>
-              Students create personal sites showcasing their skills,
-              projects, and journey through the course.
-            </p>
-          </div>
-
-          <div className={`card ${styles.featureCard}`}>
-            <h3>Web Applications</h3>
-            <p>
-              Functional web apps built with HTML, CSS, and JavaScript, including
-              interactive games, tools, and creative projects.
-            </p>
-          </div>
-
-          <div className={`card ${styles.featureCard}`}>
-            <h3>Creative Projects</h3>
-            <p>
-              Students bring their unique ideas to life - from interactive
-              storytelling to educational tools and animations.
-            </p>
+            <div className={styles.infoCard}>
+              <div className={styles.cardIcon}>💻</div>
+              <h3>What</h3>
+              <p>Learn about the hackathon format and goals</p>
+              <Link to="/hackathon/about" className={styles.cardLink}>Learn More →</Link>
+            </div>
           </div>
         </div>
       </section>
-    </main>
+
+      {/* CTA Section */}
+      <section className={styles.ctaSection}>
+        <div className={styles.container}>
+          <h2>Ready to Build Something Amazing?</h2>
+          <p>Explore our resources and get started on your hackathon project!</p>
+          <div className={styles.ctaButtons}>
+            <Link to="/hackathon/about" className={styles.primaryBtn}>Get Started</Link>
+            <Link to="/class" className={styles.secondaryBtn}>View Course Materials</Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
 
-export default Showcase;
+export default HackathonHome;

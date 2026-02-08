@@ -1,0 +1,99 @@
+/* ==================== */
+/* HACKATHON NAVIGATION */
+/* ==================== */
+
+.hackathonNav {
+  background: rgba(26, 31, 46, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--hackathon-accent);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navBrand .backLink {
+  color: var(--hackathon-accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.navBrand .backLink:hover {
+  color: #fff;
+  transform: translateX(-5px);
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--hackathon-accent);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navLink:hover {
+  color: var(--hackathon-accent);
+  background: rgba(0, 217, 255, 0.1);
+}
+
+.navLink:hover::after {
+  width: 80%;
+}
+
+/* ==================== */
+/* RESPONSIVE           */
+/* ==================== */
+
+@media (max-width: 768px) {
+  .navLinks {
+    gap: 1rem;
+  }
+
+  .navLink {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
