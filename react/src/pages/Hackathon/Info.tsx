@@ -10,9 +10,9 @@ function HackathonInfo() {
       {/* Page Header */}
       <section className={styles.pageHeader}>
         <div className={styles.container}>
-          <h1 className={styles.pageTitle}>Hackathon Handbook</h1>
+          <h1 className={styles.pageTitle}>Hackathon Overivew</h1>
           <p className={styles.pageSubtitle}>
-            Everything you need to know about the Spring 2026 ICSpark Hackathon
+            Everything you need to know about the Spring 2026 Hackathon
           </p>
         </div>
       </section>
@@ -38,76 +38,86 @@ function HackathonInfo() {
             </ul>
           </div>
 
-          {/* Partnership */}
-          <div className={styles.contentCard}>
-            <h2>ICSpark + TORCH Partnership</h2>
-            <p>
-              This hackathon is made possible through our partnership with TORCH
-              (Technology Outreach Hawaii). TORCH mentors are experienced professionals
-              who volunteer their time to support Hawaii's youth in technology education.
-            </p>
-            <p>
-              Throughout the hackathon, you'll have access to both ICSpark instructors
-              and TORCH mentors who can help with technical challenges, project planning,
-              and career advice.
-            </p>
-          </div>
+          {/*/!* Partnership *!/*/}
+          {/*<div className={styles.contentCard}>*/}
+          {/*  <h2>ICSpark + TORCH Partnership</h2>*/}
+          {/*  <p>*/}
+          {/*    This hackathon is made possible through our partnership with TORCH*/}
+          {/*    (Technology Outreach Hawaii). TORCH mentors are experienced professionals*/}
+          {/*    who volunteer their time to support Hawaii's youth in technology education.*/}
+          {/*  </p>*/}
+          {/*  <p>*/}
+          {/*    Throughout the hackathon, you'll have access to both ICSpark instructors*/}
+          {/*    and TORCH mentors who can help with technical challenges, project planning,*/}
+          {/*    and career advice.*/}
+          {/*  </p>*/}
+          {/*</div>*/}
 
-          {/* Timeline */}
-          <div className={styles.contentCard}>
-            <h2>Important Dates & Timeline</h2>
-            <div className={styles.scheduleTimeline}>
-              <div className={styles.scheduleItem}>
-                <div className={styles.scheduleDate}>Week of January 27, 2026</div>
-                <h3 className={styles.scheduleTitle}>Kickoff & Project Planning</h3>
-                <p className={styles.scheduleDescription}>
-                  Introduction to hackathon requirements, brainstorming project ideas,
-                  and creating your project plan.
-                </p>
-              </div>
+          {/*/!* Timeline *!/*/}
+          {/*<div className={styles.contentCard}>*/}
+          {/*  <h2>Event Timeline</h2>*/}
+          {/*  <div className={styles.scheduleTimeline}>*/}
+          {/*    <div className={styles.scheduleItem}>*/}
+          {/*      <div className={styles.scheduleDate}>8:30 AM</div>*/}
+          {/*      <h3 className={styles.scheduleTitle}>Doors Open</h3>*/}
+          {/*      /!*<p className={styles.scheduleDescription}>*!/*/}
+          {/*      /!*  Introduction to hackathon requirements, brainstorming project ideas,*!/*/}
+          {/*      /!*  and creating your project plan.*!/*/}
+          {/*      /!*</p>*!/*/}
+          {/*    </div>*/}
 
-              <div className={styles.scheduleItem}>
-                <div className={styles.scheduleDate}>February - March 2026</div>
-                <h3 className={styles.scheduleTitle}>Development Phase</h3>
-                <p className={styles.scheduleDescription}>
-                  Regular class sessions dedicated to building your project. Mentors
-                  available for help and guidance each week.
-                </p>
-              </div>
+          {/*    <div className={styles.scheduleItem}>*/}
+          {/*      <div className={styles.scheduleDate}>9:00 AM</div>*/}
+          {/*      <h3 className={styles.scheduleTitle}>Open Ceremony</h3>*/}
+          {/*      /!*<p className={styles.scheduleDescription}>*!/*/}
+          {/*      /!*  Regular class sessions dedicated to building your project. Mentors*!/*/}
+          {/*      /!*  available for help and guidance each week.*!/*/}
+          {/*      /!*</p>*!/*/}
+          {/*    </div>*/}
 
-              <div className={styles.scheduleItem}>
-                <div className={styles.scheduleDate}>Mid-March 2026</div>
-                <h3 className={styles.scheduleTitle}>Mid-Project Checkpoint</h3>
-                <p className={styles.scheduleDescription}>
-                  Check-in with mentors to review progress and get feedback. Optional
-                  workshops on advanced topics.
-                </p>
-              </div>
+          {/*    <div className={styles.scheduleItem}>*/}
+          {/*      <div className={styles.scheduleDate}>9:30 AM</div>*/}
+          {/*      <h3 className={styles.scheduleTitle}>Development Starts</h3>*/}
+          {/*      /!*<p className={styles.scheduleDescription}>*!/*/}
+          {/*      /!*  Check-in with mentors to review progress and get feedback. Optional*!/*/}
+          {/*      /!*  workshops on advanced topics.*!/*/}
+          {/*      /!*</p>*!/*/}
+          {/*    </div>*/}
 
-              <div className={styles.scheduleItem}>
-                <div className={styles.scheduleDate}>Early April 2026</div>
-                <h3 className={styles.scheduleTitle}>Final Development & Testing</h3>
-                <p className={styles.scheduleDescription}>
-                  Polish your project, fix bugs, and prepare your presentation.
-                </p>
-              </div>
+          {/*    <div className={styles.scheduleItem}>*/}
+          {/*      <div className={styles.scheduleDate}>1:30 PM</div>*/}
+          {/*      <h3 className={styles.scheduleTitle}>Development Pau</h3>*/}
+          {/*      /!*<p className={styles.scheduleDescription}>*!/*/}
+          {/*      /!*  Polish your project, fix bugs, and prepare your presentation.*!/*/}
+          {/*      /!*</p>*!/*/}
+          {/*    </div>*/}
 
-              <div className={styles.scheduleItem}>
-                <div className={styles.scheduleDate}>Saturday, April 25, 2026</div>
-                <h3 className={styles.scheduleTitle}>Final Showcase Event 🎉</h3>
-                <p className={styles.scheduleDescription}>
-                  <strong>Time:</strong> 9:30 AM - 12:30 PM (arrive by 9:15 AM for setup)<br />
-                  <strong>Location:</strong> Campus Center Ballroom, UH Mānoa<br />
-                  <strong>Note:</strong> This is a mandatory, in-person event for all students.
-                </p>
-              </div>
-            </div>
-          </div>
+          {/*    <div className={styles.scheduleItem}>*/}
+          {/*      <div className={styles.scheduleDate}>2:00 PM</div>*/}
+          {/*      <h3 className={styles.scheduleTitle}>Lunch/Presentations</h3>*/}
+          {/*      /!*<p className={styles.scheduleDescription}>*!/*/}
+          {/*      /!*  <strong>Time:</strong> 9:30 AM - 12:30 PM (arrive by 9:15 AM for setup)<br />*!/*/}
+          {/*      /!*  <strong>Location:</strong> Campus Center Ballroom, UH Mānoa<br />*!/*/}
+          {/*      /!*  <strong>Note:</strong> This is a mandatory, in-person event for all students.*!/*/}
+          {/*      /!*</p>*!/*/}
+          {/*    </div>*/}
+
+          {/*    <div className={styles.scheduleItem}>*/}
+          {/*      <div className={styles.scheduleDate}>~3:30 PM</div>*/}
+          {/*      <h3 className={styles.scheduleTitle}>Award Ceremony</h3>*/}
+          {/*      /!*<p className={styles.scheduleDescription}>*!/*/}
+          {/*      /!*  <strong>Time:</strong> 9:30 AM - 12:30 PM (arrive by 9:15 AM for setup)<br />*!/*/}
+          {/*      /!*  <strong>Location:</strong> Campus Center Ballroom, UH Mānoa<br />*!/*/}
+          {/*      /!*  <strong>Note:</strong> This is a mandatory, in-person event for all students.*!/*/}
+          {/*      /!*</p>*!/*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
 
           {/* Project Requirements */}
           <div className={styles.contentCard}>
             <h2>Project Requirements</h2>
-            <p style={{ marginBottom: '1.5rem' }}>
+            <p style={{marginBottom: '1.5rem'}}>
               Your project must meet the following minimum requirements:
             </p>
             <ul className={styles.objectivesList}>
