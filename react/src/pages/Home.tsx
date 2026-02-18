@@ -19,7 +19,15 @@ function Home() {
         <div className="card updates-card">
           <h2>Information &amp; Updates</h2>
 
-          {/* Update Card 1 - Most Recent */}
+          {/* Update Card 2 - Most Recent */}
+          <div className="update-item">
+            <p className="update-date">Added 2/17/2026</p>
+            <p className="update-text">
+              Save the Date! The SWITCH x ICSpark Hackathon coming March 14, 2026! 🚀 
+            </p>
+          </div>
+
+          {/* Update Card 1 */}
           <div className="update-item">
             <p className="update-date">Added 1/10/2026</p>
             <p className="update-text">
