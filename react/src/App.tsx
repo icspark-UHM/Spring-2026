@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -33,7 +33,7 @@ function App() {
     //     <Footer />
     //   </div>
     // </BrowserRouter>
-  <BrowserRouter basename={import.meta.env.BASE_URL}>
+  <HashRouter>
     <div className="App">
       <Routes>
         {/* Main site routes - with Header/Footer */}
@@ -80,7 +80,7 @@ function App() {
         <Route path="/hackathon/schedule" element={<HackathonSchedule />} />
       </Routes>
     </div>
-  </BrowserRouter>
+  </HashRouter>
   );
 }
 
