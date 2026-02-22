@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import styles from './Hackathon.module.css';
 import HackathonNav from "../../components/hackathon/HackNav";
+import Footer from "../../components/hackathon/Footer";
+
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
 function HackathonHome() {
@@ -50,10 +52,33 @@ function HackathonHome() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section className={styles.aboutSection}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>What is a hackathon?</h2>
+          <p className={styles.welcomeText}>
+            A hackathon is a competition where teams brainstorm, design, and build a
+            prototype website as a solution to a specific challenge. The term combines <i>“hack”</i> (creative problem-solving) and <i>“marathon,”</i>
+            reflecting the fast-paced,time-limited nature of the event, where participants develop technical solutions within a short period.
+          </p>
+        </div>
+      </section>
+
+
       {/* Quick Info Cards */}
       <section className={styles.infoCards}>
         <div className={styles.container}>
           <div className={styles.cardGrid}>
+
+            <div className={styles.infoCard}>
+              <div className={styles.cardIcon}>
+                <i className="bi bi-laptop"></i>
+              </div>
+              <h3>What</h3>
+              <p>Learn about the hackathon objectives</p>
+              <Link to="/hackathon/about" className={styles.cardLink}>Learn More →</Link>
+            </div>
+
             <div className={styles.infoCard}>
               <div className={styles.cardIcon}>
                 <i className="bi bi-calendar3"></i>
@@ -68,33 +93,16 @@ function HackathonHome() {
                 <i className="bi bi-people-fill"></i>
               </div>
               <h3>Who</h3>
-              <p>Meet our talented students and mentors</p>
-              <Link to="/hackathon/students" className={styles.cardLink}>Meet the Team →</Link>
+              <p>Meet our talented student-focused team</p>
+              <Link to="/hackathon/info" className={styles.cardLink}>Meet the Team →</Link>
             </div>
 
-            <div className={styles.infoCard}>
-              <div className={styles.cardIcon}>
-                <i className="bi bi-laptop"></i>
-              </div>
-              <h3>What</h3>
-              <p>Learn about the hackathon format and goals</p>
-              <Link to="/hackathon/about" className={styles.cardLink}>Learn More →</Link>
-            </div>
+
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className={styles.ctaSection}>
-        <div className={styles.container}>
-          <h2>Ready to Build Something Amazing?</h2>
-          <p>Explore our resources and get started on your hackathon project!</p>
-          <div className={styles.ctaButtons}>
-            <Link to="/hackathon/about" className={styles.primaryBtn}>Get Started</Link>
-            <Link to="/class" className={styles.secondaryBtn}>View Course Materials</Link>
-          </div>
-        </div>
-      </section>
+      <Footer />
     </div>
   );
 }

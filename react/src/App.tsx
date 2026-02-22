@@ -16,6 +16,7 @@ import HackathonProjects from './pages/Hackathon/Projects';
 // import HackathonMentors from './pages/Hackathon/Mentors';
 // import HackathonStudents from './pages/Hackathon/Students';
 import HackathonSchedule from "./pages/Hackathon/Schedule";
+import HackathonAbout from "./pages/Hackathon/About";
 
 function App() {
   return (
@@ -78,6 +79,8 @@ function App() {
         <Route path="/hackathon/info" element={<HackathonInfo />} />
         <Route path="/hackathon/projects" element={<HackathonProjects />} />
         <Route path="/hackathon/schedule" element={<HackathonSchedule />} />
+        <Route path="/hackathon/about" element={<HackathonAbout />} />
+
       </Routes>
     </div>
   </HashRouter>
