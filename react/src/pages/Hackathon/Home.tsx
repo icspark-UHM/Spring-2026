@@ -64,7 +64,6 @@ function HackathonHome() {
         </div>
       </section>
 
-
       {/* Quick Info Cards */}
       <section className={styles.infoCards}>
         <div className={styles.container}>
@@ -90,11 +89,11 @@ function HackathonHome() {
 
             <div className={styles.infoCard}>
               <div className={styles.cardIcon}>
-                <i className="bi bi-people-fill"></i>
+                <i className="bi bi-journal-bookmark"></i>
               </div>
-              <h3>Who</h3>
-              <p>Meet our talented student-focused team</p>
-              <Link to="/hackathon/info" className={styles.cardLink}>Meet the Team →</Link>
+              <h3>Rules</h3>
+              <p>Read the official competition guidelines</p>
+              <Link to="/hackathon/rules" className={styles.cardLink}>Read Rules →</Link>
             </div>
 
 

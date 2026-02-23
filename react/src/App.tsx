@@ -13,6 +13,7 @@ import About from "./pages/About";
 import HackathonHome from './pages/Hackathon/Home';
 import HackathonInfo from './pages/Hackathon/Info';
 import HackathonProjects from './pages/Hackathon/Projects';
+import HackathonRules from './pages/Hackathon/Rules';
 // import HackathonMentors from './pages/Hackathon/Mentors';
 // import HackathonStudents from './pages/Hackathon/Students';
 import HackathonSchedule from "./pages/Hackathon/Schedule";
@@ -80,6 +81,7 @@ function App() {
         <Route path="/hackathon/projects" element={<HackathonProjects />} />
         <Route path="/hackathon/schedule" element={<HackathonSchedule />} />
         <Route path="/hackathon/about" element={<HackathonAbout />} />
+        <Route path="/hackathon/rules" element={<HackathonRules />} />
 
       </Routes>
     </div>
