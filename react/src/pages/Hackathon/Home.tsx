@@ -91,7 +91,7 @@ function HackathonHome() {
               <div className={styles.cardIcon}>
                 <i className="bi bi-journal-bookmark"></i>
               </div>
-              <h3>Rules</h3>
+              <h3>Rules & Scoring</h3>
               <p>Read the official competition guidelines and scoring criteria</p>
               <Link to="/hackathon/rules" className={styles.cardLink}>Read Rules & Scoring →</Link>
             </div>

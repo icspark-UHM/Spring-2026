@@ -13,7 +13,7 @@ import About from "./pages/About";
 import HackathonHome from './pages/Hackathon/Home';
 import HackathonInfo from './pages/Hackathon/Info';
 import HackathonProjects from './pages/Hackathon/Projects';
-import HackathonRules from './pages/Hackathon/Rules';
+import HackathonRules from './pages/Hackathon/Rules'; //Scoring criteria is included in the Rules page
 // import HackathonMentors from './pages/Hackathon/Mentors';
 // import HackathonStudents from './pages/Hackathon/Students';
 import HackathonSchedule from "./pages/Hackathon/Schedule";
