@@ -197,7 +197,7 @@ function Rules() {
           <div className={styles.gridRow}>
             <div className={styles.category}>Presentation Skills</div>
             <div className={styles.description}>How well was the team to explain their project? Did the team clearly share their problem, solution, and impact?</div>
-            <div className={styles.score}> ___ / 10 </div>
+            <div className={styles.score}> ___ / 20 </div>
           </div>    
           
           {/* Repeat for other categories... */}
