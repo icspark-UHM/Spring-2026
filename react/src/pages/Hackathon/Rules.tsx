@@ -157,14 +157,57 @@ function Rules() {
       {/* Rules & Scoring */}
       <div className={styles.contentCard}>
         <h2>Scoring Criteria</h2>
-        <ul className={styles.categoriesList}>
-          <li><strong>Submission:</strong> Did the group submit their project? <b>( ___ / 10)</b></li>
-          <li><strong>Creativity:</strong> How original and creative is the idea? Does it introduce a new or unique solution? <b>( ___ / 35)</b></li>
-          <li><strong>Technical Difficulty:</strong> Does the project work as intended? <b>( ___ / 25)</b></li>
-          <li><strong>User Experience:</strong> Is the design user-friendly and visually appealing? <br /><b>( ___ / 10)</b></li>
-          <li><strong>Presentation Skills:</strong> How well was the team able to explain their project? Did the team clearly share their problem, solution, and impact? <b>( ___ / 20)</b></li>
-          <li><strong>Total:</strong> The sum of all scores across the categories above: <b>( ___ / 100)</b></li>
-        </ul>
+        <div className={styles.scoringGrid}>
+          {/* Header Row */}
+          <div className={`${styles.gridRow} ${styles.header}`}>
+            <div>Submission</div>
+            <div>Description</div>
+            <div>Scoring</div>
+          </div>
+
+          {/* Data Rows */}
+          <div className={styles.gridRow}>
+            <div className={styles.category}>Submission</div>
+            <div className={styles.description}>Did the group submit their project?</div>
+            <div className={styles.score}> ___ / 10 </div>
+          </div>
+
+          {/* Creativity */}
+          <div className={styles.gridRow}>
+            <div className={styles.category}>Creativity</div>
+            <div className={styles.description}>How original and creative is the idea? Does it introduce a new or unique solution</div>
+            <div className={styles.score}> ___ / 35 </div>
+          </div>
+
+          {/* Technical Difficulty */}
+          <div className={styles.gridRow}>
+            <div className={styles.category}>Technical Difficulty</div>
+            <div className={styles.description}>Does the project work as intended?</div>
+            <div className={styles.score}> ___ / 25 </div>
+          </div>
+
+          {/* Technical Difficulty */}
+          <div className={styles.gridRow}>
+            <div className={styles.category}>User Experience</div>
+            <div className={styles.description}>Is the design user-friendly and visually appealing?</div>
+            <div className={styles.score}> ___ / 10 </div>
+          </div> 
+
+          {/* User Experience */}
+          <div className={styles.gridRow}>
+            <div className={styles.category}>Presentation Skills</div>
+            <div className={styles.description}>How well was the team to explain their project? Did the team clearly share their problem, solution, and impact?</div>
+            <div className={styles.score}> ___ / 10 </div>
+          </div>    
+          
+          {/* Repeat for other categories... */}
+
+          <div className={`${styles.gridRow} ${styles.total}`}>
+            <div className={styles.category}>Total</div>
+            <div className={styles.description}>The sum of all scores across the categories above.</div>
+            <div className={styles.score}> ___ / 100 </div>
+          </div>
+        </div>
       </div>
 
       <Footer />

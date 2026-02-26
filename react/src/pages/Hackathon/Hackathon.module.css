@@ -1315,3 +1315,58 @@
     letter-spacing: 4px;
   }
 }
+
+/* The Scoring CSS on the Rules Page */
+.scoringGrid {
+  display: grid;
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden; /* Keeps corners rounded */
+}
+
+.gridRow {
+  display: grid;
+  /* This creates 3 columns: 20% width, Auto-filling middle, and 100px fixed end */
+  grid-template-columns: 1fr 2fr 120px;
+  border-bottom: 1px solid #333;
+  align-items: center;
+}
+
+.gridRow div {
+  padding: 15px;
+}
+
+.header {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.category {
+  font-weight: bold;
+  color: #fff;
+}
+
+.score {
+  text-align: center;
+  font-family: monospace;
+}
+
+.total {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom: none;
+  font-weight: bold;
+}
+
+/* The hover effect */
+.gridRow:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* Subtle highlight */
+  cursor: pointer;
+  transform: translateX(5px); /* Optional: slight nudge to the right */
+}
+
+.total:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Different highlight for the total */
+}
