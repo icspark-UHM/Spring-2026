@@ -109,7 +109,7 @@ function Rules() {
                 <h3>Submission Deadline</h3>
                 <p>Projects must be submitted before the 4-hour window closes. Late submissions will not be considered. Teams should have already shared their project prior to competition:<br />
                     <a
-                        href="go.hawaii.edu/DJ8"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfLD-clMA6G7aAXic0_haAvqhSo89z2Lnv0ktP0zGUz8I0WYA/viewform"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: 'var(--hackathon-accent)' }}
