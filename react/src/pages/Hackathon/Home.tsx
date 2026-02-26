@@ -92,8 +92,8 @@ function HackathonHome() {
                 <i className="bi bi-journal-bookmark"></i>
               </div>
               <h3>Rules</h3>
-              <p>Read the official competition guidelines</p>
-              <Link to="/hackathon/rules" className={styles.cardLink}>Read Rules →</Link>
+              <p>Read the official competition guidelines and scoring criteria</p>
+              <Link to="/hackathon/rules" className={styles.cardLink}>Read Rules & Scoring →</Link>
             </div>
 
 
