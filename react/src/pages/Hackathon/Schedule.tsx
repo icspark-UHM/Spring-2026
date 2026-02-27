@@ -25,14 +25,14 @@ function HackathonSchedule() {
                 <h2>Our Venue</h2>
                 <img src='imgs/hackathon/Parking.png' alt="Hackathon Venue" />
 
-                <h3> Welcome Room Campus Center 3rd Floor R307 </h3>
-                <h4> Subject to change building location. Will notify if happens </h4>
+                <h3> Campus Center Ballroom 3rd Floor </h3>
+                <h4 style={{color: '#ffcc00'}}> Subject to change building location. Will notify if happens </h4>
                 <h4><br /> 2465 Campus Rd, Honolulu, HI 96822 <br /> University of Hawaiʻi at Mānoa </h4>
 
                 {/* Add this Legend Overlay or List */}
                 <br />
                 <div className={styles.mapLegend}>
-                  <p>⭐ <strong>Star:</strong> Welcome Room (Campus Center, R307)</p>
+                  <p>⭐ <strong>Star:</strong> Campus Center Ballroom (3rd Floor)</p>
                   <p>📍 <strong>Red Pin:</strong> Recommended Parking </p>
                 </div>
 
