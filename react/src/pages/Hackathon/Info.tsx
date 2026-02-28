@@ -7,13 +7,10 @@ function HackathonInfo() {
     <div className={styles.hackathonWrapper}>
       <HackathonNav />
 
-      {/* Page Header */}
-      <section className={styles.pageHeader}>
+      <section className={`${styles.pageHeader} ${styles.pageHeaderHero}`}>
         <div className={styles.container}>
-          <h1 className={styles.pageTitle}>Hackathon Overivew</h1>
-          <p className={styles.pageSubtitle}>
-            Everything you need to know about the Spring 2026 Hackathon
-          </p>
+          <h1 className={`${styles.pageTitle} ${styles.pageTitleDark}`}>Hackathon Overview</h1>
+          <p className={`${styles.pageSubtitle} ${styles.pageSubtitleDark}`}>Everything you need to know about the Spring 2026 Hackathon</p>
         </div>
       </section>
 

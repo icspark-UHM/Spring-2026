@@ -67,6 +67,7 @@ Before you begin, make sure you have installed:
 2. **Install dependencies:**
    ```bash
    npm install
+   npm install bootstrap-icons
    ```
 
 3. **Start the development server:**

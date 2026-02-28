@@ -1,23 +1,30 @@
-/* ==================== */
-/* HACKATHON STYLES     */
-/* ==================== */
+/* ============================================================ */
+/* HACKATHON.MODULE.CSS                                         */
+/* ICSpark Web Development — Spring 2026                        */
+/* ============================================================ */
+
+
+/* ============================================================ */
+/* 1. CSS VARIABLES                                             */
+/* ============================================================ */
 
 :root {
-  --hackathon-dark: #0a1628;
-  --hackathon-darker: #030a14;
-  --hackathon-accent: #eeeff3;
-  --hackathon-torch: #ffcc00;
-  --hackathon-pink: #d54484;
-  --hackathon-coral: #ff6347;
-  --hackathon-purple: #9d4edd;
-  --hackathon-orange: #c24e35;
-  --hackathon-green: #06ffa5;
-  --page-color1: #e5edea;
+  --hackathon-dark:    #0a1628;
+  --hackathon-darker:  #030a14;
+  --hackathon-accent:  #eeeff3;
+  --hackathon-torch:   #ffcc00;
+  --hackathon-pink:    #d54484;
+  --hackathon-coral:   #ff6347;
+  --hackathon-purple:  #9d4edd;
+  --hackathon-orange:  #c24e35;
+  --hackathon-green:   #06ffa5;
+  --page-color1:       #e5edea;
 }
 
-/* ==================== */
-/* GLOBAL / SHARED      */
-/* ==================== */
+
+/* ============================================================ */
+/* 2. GLOBAL / SHARED                                           */
+/* ============================================================ */
 
 .hackathonWrapper {
   min-height: 100vh;
@@ -49,10 +56,234 @@
   border-radius: 2px;
 }
 
-/* ==================== */
-/* CTA SECTION          */
-/* (shared across pages)*/
-/* ==================== */
+.sectionLabel {
+  color: var(--hackathon-torch);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.75rem;
+}
+
+
+/* ============================================================ */
+/* 3. PAGE HEADER (shared)                                      */
+/* ============================================================ */
+
+.pageHeader {
+  padding: 6rem 2rem 4rem;
+  background: linear-gradient(135deg, var(--hackathon-dark) 0%, var(--hackathon-darker) 100%);
+  text-align: center;
+  border-bottom: 2px solid var(--hackathon-accent);
+}
+
+.pageHeaderHero {
+  background-image: url('/imgs/hackathon/backdrop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pageTitle {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.pageTitleDark,
+.pageSubtitleDark {
+  color: #030a14;
+}
+
+.pageSubtitle {
+  font-size: 1.2rem;
+  color: #030a14;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+/* ============================================================ */
+/* 4. CONTENT SECTIONS (shared)                                 */
+/* ============================================================ */
+
+.contentSection {
+  padding: 5rem 0;
+  background: var(--hackathon-darker);
+}
+
+.contentGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contentCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  backdrop-filter: blur(10px);
+  margin: 20px;
+}
+
+.contentCard h2 {
+  color: var(--hackathon-accent);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contentCard h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.contentCard p {
+  color: #d0d0d0;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.contentCard p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================ */
+/* 5. LISTS (shared)                                            */
+/* ============================================================ */
+
+.objectivesList,
+.categoriesList {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.objectivesList li,
+.categoriesList li {
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  background: rgba(0, 217, 255, 0.05);
+  border-left: 4px solid var(--hackathon-accent);
+  border-radius: 8px;
+  color: #d0d0d0;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.objectivesList li:hover,
+.categoriesList li:hover {
+  background: rgba(0, 217, 255, 0.1);
+  transform: translateX(10px);
+}
+
+.objectivesList li strong {
+  color: var(--hackathon-accent);
+  font-weight: 700;
+}
+
+.languageList,
+.bulletList {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.languageList li,
+.bulletList li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+  color: #d0d0d0;
+}
+
+.languageList li::before,
+.bulletList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--hackathon-accent);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.numberedList {
+  counter-reset: step-counter;
+  list-style: none;
+  padding-left: 0;
+}
+
+.numberedList li {
+  counter-increment: step-counter;
+  padding: 0.75rem 0 0.75rem 2.5rem;
+  position: relative;
+  color: #d0d0d0;
+}
+
+.numberedList li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  background: var(--hackathon-accent);
+  color: var(--hackathon-darker);
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.templateList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.templateList li {
+  padding: 0.75rem 1rem;
+  background: rgba(0, 217, 255, 0.05);
+  border-left: 4px solid var(--hackathon-accent);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  color: #d0d0d0;
+}
+
+.checklistList {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.checklistItem {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  color: #d0d0d0;
+  transition: background 0.3s;
+}
+
+.checklistItem:hover {
+  background: rgba(0, 217, 255, 0.05);
+}
+
+.checkbox {
+  font-size: 1.5rem;
+  color: var(--hackathon-accent);
+}
+
+
+/* ============================================================ */
+/* 6. CTA SECTION (shared)                                      */
+/* ============================================================ */
 
 .ctaSection {
   padding: 6rem 0;
@@ -115,105 +346,10 @@
   transform: scale(1.05);
 }
 
-/* ==================== */
-/* PAGE HEADER          */
-/* (shared across pages)*/
-/* ==================== */
 
-.pageHeader {
-  padding: 6rem 2rem 4rem;
-  background: linear-gradient(135deg, var(--hackathon-dark) 0%, var(--hackathon-darker) 100%);
-  text-align: center;
-  border-bottom: 2px solid var(--hackathon-accent);
-}
-
-.pageTitle {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800;
-  margin-bottom: 1rem;
-  color: #fff;
-  letter-spacing: 1px;
-}
-
-.pageSubtitle {
-  font-size: 1.2rem;
-  color: var(--hackathon-accent);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contentSection {
-  padding: 5rem 0;
-  background: var(--hackathon-darker);
-}
-
-.contentGrid {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.contentCard {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(0, 217, 255, 0.2);
-  border-radius: 16px;
-  padding: 3rem 2.5rem;
-  backdrop-filter: blur(10px);
-  margin: 20px;
-}
-
-.contentCard h2 {
-  color: var(--hackathon-accent);
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.contentCard h3 {
-  color: #fff;
-  font-size: 1.3rem;
-  margin-bottom: 0.75rem;
-}
-
-.contentCard p {
-  color: #d0d0d0;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
-}
-
-.contentCard p:last-child {
-  margin-bottom: 0;
-}
-
-.objectivesList,
-.categoriesList {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
-}
-
-.objectivesList li,
-.categoriesList li {
-  padding: 1rem 1.5rem;
-  margin-bottom: 1rem;
-  background: rgba(0, 217, 255, 0.05);
-  border-left: 4px solid var(--hackathon-accent);
-  border-radius: 8px;
-  color: #d0d0d0;
-  line-height: 1.6;
-  transition: all 0.3s ease;
-}
-
-.objectivesList li:hover,
-.categoriesList li:hover {
-  background: rgba(0, 217, 255, 0.1);
-  transform: translateX(10px);
-}
-
-.objectivesList li strong {
-  color: var(--hackathon-accent);
-  font-weight: 700;
-}
+/* ============================================================ */
+/* 7. EXPECTATION GRID (shared)                                 */
+/* ============================================================ */
 
 .expectationGrid {
   display: grid;
@@ -244,9 +380,10 @@
   margin: 0;
 }
 
-/* ==================== */
-/* HOME PAGE            */
-/* ==================== */
+
+/* ============================================================ */
+/* 8. HOME PAGE                                                 */
+/* ============================================================ */
 
 .hero {
   position: relative;
@@ -359,13 +496,8 @@
   box-shadow: 0 0 40px rgba(255, 204, 0, 0.5);
 }
 
-.torchText {
-  color: var(--hackathon-torch);
-}
-
-.torchSubtext {
-  color: var(--hackathon-torch);
-}
+.torchText  { color: var(--hackathon-torch); }
+.torchSubtext { color: var(--hackathon-torch); }
 
 .plusSign {
   font-size: 3rem;
@@ -493,9 +625,10 @@
   font-size: 0.95rem;
 }
 
-/* ==================== */
-/* SCHEDULE PAGE        */
-/* ==================== */
+
+/* ============================================================ */
+/* 9. SCHEDULE PAGE                                             */
+/* ============================================================ */
 
 .scheduleTimeline {
   position: relative;
@@ -548,9 +681,10 @@
   line-height: 1.6;
 }
 
-/* ==================== */
-/* ABOUT PAGE           */
-/* ==================== */
+
+/* ============================================================ */
+/* 10. ABOUT PAGE                                               */
+/* ============================================================ */
 
 .peopleGrid {
   display: grid;
@@ -647,8 +781,7 @@
 }
 
 .roleSkills li {
-  padding: 0.5rem 0;
-  padding-left: 1.5rem;
+  padding: 0.5rem 0 0.5rem 1.5rem;
   position: relative;
   color: #b0b0b0;
 }
@@ -672,9 +805,10 @@
   margin-bottom: 1rem;
 }
 
-/* ==================== */
-/* INFO PAGE            */
-/* ==================== */
+
+/* ============================================================ */
+/* 11. INFO PAGE                                                */
+/* ============================================================ */
 
 .importantInfo {
   background: rgba(255, 217, 0, 0.1);
@@ -798,31 +932,6 @@
   font-weight: 700;
 }
 
-.languageList,
-.bulletList {
-  list-style: none;
-  padding-left: 0;
-  margin: 1rem 0;
-}
-
-.languageList li,
-.bulletList li {
-  padding: 0.5rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-  color: #d0d0d0;
-}
-
-.languageList li::before,
-.bulletList li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: var(--hackathon-accent);
-  font-size: 1.5rem;
-  line-height: 1;
-}
-
 .toolsList {
   margin-top: 1.5rem;
 }
@@ -843,80 +952,110 @@
   margin-bottom: 1rem;
 }
 
-.numberedList {
-  counter-reset: step-counter;
-  list-style: none;
-  padding-left: 0;
-}
-
-.numberedList li {
-  counter-increment: step-counter;
-  padding: 0.75rem 0 0.75rem 2.5rem;
-  position: relative;
-  color: #d0d0d0;
-}
-
-.numberedList li::before {
-  content: counter(step-counter);
-  position: absolute;
-  left: 0;
-  background: var(--hackathon-accent);
-  color: var(--hackathon-darker);
-  width: 1.8rem;
-  height: 1.8rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.9rem;
-}
-
-.templateList {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-}
-
-.templateList li {
-  padding: 0.75rem 1rem;
-  background: rgba(0, 217, 255, 0.05);
-  border-left: 4px solid var(--hackathon-accent);
-  border-radius: 8px;
-  margin-bottom: 0.75rem;
-  color: #d0d0d0;
-}
-
 .unityRules {
   color: #d0d0d0;
   margin: 1rem 0;
 }
 
-.checklistList {
-  list-style: none;
-  padding: 0;
+.notice {
+  font-style: italic;
+  color: var(--hackathon-torch);
+  margin-top: 1rem;
+}
+
+.note {
+  background: rgba(255, 217, 0, 0.05);
+  border-left: 4px solid var(--hackathon-torch);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+.secretCode {
+  background: rgba(0, 217, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.contactItem {
+  text-align: center;
+}
+
+.contactItem h4 {
+  color: var(--hackathon-accent);
+  margin-bottom: 0.75rem;
+}
+
+.contactItem a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.contactItem a:hover {
+  color: var(--hackathon-accent);
+}
+
+.contactItem p {
+  color: #d0d0d0;
+  margin: 0.25rem 0;
+}
+
+.importantNote {
+  background: rgba(255, 217, 0, 0.1);
+  border: 2px dashed var(--hackathon-torch);
+  padding: 1.5rem;
+  border-radius: var(--radius);
   margin: 1.5rem 0;
 }
 
-.checklistItem {
-  display: flex;
-  align-items: start;
-  gap: 1rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 8px;
-  margin-bottom: 0.75rem;
-  color: #d0d0d0;
-  transition: background 0.3s;
-}
-
-.checklistItem:hover {
-  background: rgba(0, 217, 255, 0.05);
-}
-
-.checkbox {
-  font-size: 1.5rem;
+.importantNote a {
   color: var(--hackathon-accent);
+  font-weight: 600;
+}
+
+
+/* ============================================================ */
+/* 12. RULES / SCORING PAGE                                     */
+/* ============================================================ */
+
+.rulesSection {
+  margin: 3rem 0;
+}
+
+.rulesSection h2 {
+  color: var(--hackathon-torch);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.ruleCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ruleCard h3 {
+  color: var(--hackathon-accent);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.ruleCard p {
+  color: #d0d0d0;
+  line-height: 1.7;
+  margin: 0.75rem 0;
 }
 
 .scoringTable {
@@ -963,104 +1102,63 @@
   min-width: 100px;
 }
 
-.rulesSection {
-  margin: 3rem 0;
-}
-
-.rulesSection h2 {
-  color: var(--hackathon-torch);
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-}
-
-.ruleCard {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(0, 217, 255, 0.2);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.ruleCard h3 {
-  color: var(--hackathon-accent);
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-.ruleCard p {
-  color: #d0d0d0;
-  line-height: 1.7;
-  margin: 0.75rem 0;
-}
-
-.secretCode {
-  background: rgba(0, 217, 255, 0.1);
-  padding: 1rem;
-  border-radius: 8px;
-  margin-top: 1rem;
-}
-
-.contactGrid {
+/* Scoring Grid Table */
+.scoringGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-
-.contactItem {
-  text-align: center;
-}
-
-.contactItem h4 {
-  color: var(--hackathon-accent);
-  margin-bottom: 0.75rem;
-}
-
-.contactItem a {
-  color: #fff;
-  text-decoration: underline;
-  transition: color 0.3s;
-}
-
-.contactItem a:hover {
-  color: var(--hackathon-accent);
-}
-
-.contactItem p {
-  color: #d0d0d0;
-  margin: 0.25rem 0;
-}
-
-.notice {
-  font-style: italic;
-  color: var(--hackathon-torch);
-  margin-top: 1rem;
-}
-
-.note {
-  background: rgba(255, 217, 0, 0.05);
-  border-left: 4px solid var(--hackathon-torch);
-  padding: 1rem;
+  width: 100%;
+  border: 1px solid #333;
   border-radius: 8px;
-  margin: 1rem 0;
-  font-style: italic;
+  overflow: hidden;
 }
 
-/* ==================== */
-/* PROJECTS PAGE        */
-/* ==================== */
-
-.pageHeaderHero {
-  background-image: url('/imgs/hackathon/backdrop.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.gridRow {
+  display: grid;
+  grid-template-columns: 1fr 2fr 120px;
+  border-bottom: 1px solid #333;
+  align-items: center;
 }
 
-.pageTitleDark,
-.pageSubtitleDark {
-  color: #030a14;
+.gridRow div {
+  padding: 15px;
 }
+
+.gridRow:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transform: translateX(5px);
+}
+
+.header {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.category {
+  font-weight: bold;
+  color: #fff;
+}
+
+.score {
+  text-align: center;
+  font-family: monospace;
+}
+
+.total {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom: none;
+  font-weight: bold;
+}
+
+.total:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+
+/* ============================================================ */
+/* 13. PROJECTS PAGE                                            */
+/* ============================================================ */
 
 .challengeSection {
   margin: 3rem 0;
@@ -1126,19 +1224,6 @@
   margin-top: 0.75rem;
 }
 
-.importantNote {
-  background: rgba(255, 217, 0, 0.1);
-  border: 2px dashed var(--hackathon-torch);
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  margin: 1.5rem 0;
-}
-
-.importantNote a {
-  color: var(--hackathon-accent);
-  font-weight: 600;
-}
-
 .projectNumber {
   display: flex;
   align-items: center;
@@ -1153,16 +1238,10 @@
   opacity: 0.85;
 }
 
-.sectionLabel {
-  color: var(--hackathon-torch);
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin: 1.5rem 0 0.75rem;
-}
 
-/* ==================== */
-/* ANIMATIONS           */
-/* ==================== */
+/* ============================================================ */
+/* 14. ANIMATIONS                                               */
+/* ============================================================ */
 
 @keyframes fadeInUp {
   from {
@@ -1176,28 +1255,76 @@
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-30px) rotate(5deg);
-  }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-30px) rotate(5deg); }
 }
 
 @keyframes twinkle {
-  0%, 100% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.3;
-  }
+  0%, 100% { opacity: 0.8; }
+  50%       { opacity: 0.3; }
 }
 
-/* ==================== */
-/* RESPONSIVE           */
-/* ==================== */
+
+/* ============================================================ */
+/* 15. RESPONSIVE — 768px                                       */
+/* ============================================================ */
 
 @media (max-width: 768px) {
+
+  /* Global */
+  .container {
+    padding: 0 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .sectionLabel {
+    font-size: 1rem;
+  }
+
+  /* Page header */
+  .pageHeader {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  /* Content cards */
+  .contentCard {
+    padding: 2rem 1.5rem;
+  }
+
+  /* Sections */
+  .contentSection,
+  .welcomeSection,
+  .aboutSection,
+  .infoCards,
+  .ctaSection {
+    padding: 3rem 0;
+  }
+
+  /* CTA buttons */
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Expectation grid */
+  .expectationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .expectationItem {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
   /* Home */
   .hero {
     min-height: 80vh;
@@ -1221,35 +1348,7 @@
     font-size: 2rem;
   }
 
-  .sectionTitle {
-    font-size: 2rem;
-  }
-
   .cardGrid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Shared */
-  .ctaButtons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .primaryBtn,
-  .secondaryBtn {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .pageHeader {
-    padding: 4rem 1.5rem 3rem;
-  }
-
-  .contentCard {
-    padding: 2rem 1.5rem;
-  }
-
-  .expectationGrid {
     grid-template-columns: 1fr;
   }
 
@@ -1263,14 +1362,8 @@
   }
 
   /* About */
-  .peopleGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .rolesGrid {
-    grid-template-columns: 1fr;
-  }
-
+  .peopleGrid,
+  .rolesGrid,
   .teamExamples {
     grid-template-columns: 1fr;
   }
@@ -1299,14 +1392,41 @@
   }
 
   /* Projects */
+  .challengeCard {
+    padding: 1.5rem 1rem;
+  }
+
+  .challengeCard:hover {
+    transform: none;
+  }
+
   .challengeHeader {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
   }
+
+  .projectTheme {
+    font-size: 1.3rem;
+  }
+
+  /* Scoring grid */
+  .gridRow {
+    grid-template-columns: 1fr 1.5fr 80px;
+  }
+
+  .scoringGrid {
+    font-size: 0.9rem;
+  }
 }
 
+
+/* ============================================================ */
+/* 16. RESPONSIVE — 480px                                       */
+/* ============================================================ */
+
 @media (max-width: 480px) {
+
   .heroTitle {
     font-size: 2rem;
   }
@@ -1314,59 +1434,31 @@
   .heroPresents {
     letter-spacing: 4px;
   }
-}
 
-/* The Scoring CSS on the Rules Page */
-.scoringGrid {
-  display: grid;
-  width: 100%;
-  border: 1px solid #333;
-  border-radius: 8px;
-  overflow: hidden; /* Keeps corners rounded */
-}
+  .contentCard {
+    padding: 1.25rem 1rem;
+    margin: 8px;
+  }
 
-.gridRow {
-  display: grid;
-  /* This creates 3 columns: 20% width, Auto-filling middle, and 100px fixed end */
-  grid-template-columns: 1fr 2fr 120px;
-  border-bottom: 1px solid #333;
-  align-items: center;
-}
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
 
-.gridRow div {
-  padding: 15px;
-}
+  .challengeCard {
+    padding: 1rem 0.75rem;
+  }
 
-.header {
-  background-color: rgba(255, 255, 255, 0.1);
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-}
+  .expectationItem {
+    padding: 0.75rem;
+    border-radius: 6px;
+  }
 
-.category {
-  font-weight: bold;
-  color: #fff;
-}
+  /* Scoring grid — hide description column, keep category + score */
+  .gridRow {
+    grid-template-columns: 1fr 80px;
+  }
 
-.score {
-  text-align: center;
-  font-family: monospace;
-}
-
-.total {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-bottom: none;
-  font-weight: bold;
-}
-
-/* The hover effect */
-.gridRow:hover {
-  background-color: rgba(255, 255, 255, 0.05); /* Subtle highlight */
-  cursor: pointer;
-  transform: translateX(5px); /* Optional: slight nudge to the right */
-}
-
-.total:hover {
-  background-color: rgba(0, 123, 255, 0.1); /* Different highlight for the total */
+  .gridRow div:nth-child(2) {
+    display: none;
+  }
 }

@@ -11,12 +11,12 @@ function Rules() {
 
       {/* Header Section */}
     {/* This section creates the large dark header like the Projects page */}
-      <header className={styles.pageHeader}>
-        <h1 className={styles.pageTitle}>Hackathon Rules</h1>
-        <p className={styles.pageSubtitle}>
-          Guidelines for a fair and fun competition
-        </p>
-      </header>
+      <section className={`${styles.pageHeader} ${styles.pageHeaderHero}`}>
+        <div className={styles.container}>
+          <h1 className={`${styles.pageTitle} ${styles.pageTitleDark}`}>Hackathon Rules</h1>
+          <p className={`${styles.pageSubtitle} ${styles.pageSubtitleDark}`}>Guidelines for a fair and fun competition</p>
+        </div>
+      </section>
 
       {/* Content */}
       <section className={styles.contentSection}>

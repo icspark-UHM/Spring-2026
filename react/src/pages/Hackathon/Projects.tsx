@@ -5,45 +5,45 @@ import Footer from "../../components/hackathon/Footer.tsx";
 const projects = [
   {
     number: 1,
-    theme: "Hawaiian Culture",
-    title: "Learn Aloha",
-    subtitle: "Educating tourists about Native Hawaiian culture",
-    problem: `Hawai'i is a top global tourist destination, welcoming millions of visitors each year. However, many tourists arrive with limited knowledge of Native Hawaiian culture, traditions, and the islands' deep-rooted connection to the land (ʻāina). This lack of awareness can lead to unintentional cultural insensitivity, environmental harm, and missed opportunities for meaningful engagement with local communities.`,
-    challenge: `Create an engaging, interactive mobile or web application that educates tourists about Native Hawaiian culture, including history, language, traditional practices, local plants, food, and customs. The app should encourage cultural respect and responsible tourism while making learning fun and accessible for visitors of all backgrounds.`,
-    tips: [
-      { label: "Cultural Education", detail: "Teach tourists about Hawaiian traditions, including hula, makahiki (Hawaiian New Year), kapu system (ancient laws), and ʻŌlelo Hawaiʻi (Hawaiian language)." },
-      { label: "Flora & Fauna", detail: "Highlight native and endemic plants (e.g., taro, koa, ʻōhiʻa) and their cultural significance, as well as conservation efforts." },
-      { label: "Local Food", detail: "Educate visitors about traditional Hawaiian foods (e.g., poi, laulau, poke) and where to find authentic dishes." },
-      { label: "Sustainability & Responsible Tourism", detail: "Provide guidance on culturally appropriate behavior, such as respecting sacred sites, avoiding invasive species, and supporting local businesses." },
-    ],
+    theme: "Student Inconvenience",
+    title: "Smart Assignment Tracker",
+    subtitle: "A planner that works as hard as you do",
+    problem: `Students juggle multiple classes, each with its own assignments, deadlines, and difficulty levels. It's easy to lose track of what's due, underestimate how long something will take, or suddenly realize you've fallen behind — all at the worst possible moment. Traditional planners and calendar apps don't account for how urgent, difficult, or behind-schedule an assignment actually is.`,
+    challenge: `Build a smart assignment tracker that automatically prioritizes tasks based on deadline, estimated difficulty, and how far behind the student is. The app should help students focus on what matters most right now — not just what's due next.`
+    // tips: [
+    //   { label: "Priority Score", detail: "Combine deadline urgency, self-reported difficulty (easy/medium/hard), and completion percentage into a single priority score that ranks assignments automatically." },
+    //   { label: "Behind-Schedule Detection", detail: "If a deadline is approaching and progress is low, flag the assignment with a warning so students know to act fast." },
+    //   { label: "Input UX", detail: "Make it fast to add an assignment — class name, due date, difficulty, and estimated hours. Fewer clicks = more likely students will actually use it." },
+    //   { label: "Visual Feedback", detail: "Use color coding (red/yellow/green) or progress bars to give students an at-a-glance sense of their workload." },
+    // ],
   },
   {
     number: 2,
-    theme: "Project 2 Theme",
-    title: "Project 2 Title",
-    subtitle: "Short subtitle describing the project",
-    problem: `[Problem description goes here.]`,
-    challenge: `[Challenge description goes here.]`,
-    tips: [
-      { label: "Tip 1", detail: "Description of tip 1." },
-      { label: "Tip 2", detail: "Description of tip 2." },
-      { label: "Tip 3", detail: "Description of tip 3." },
-      { label: "Tip 4", detail: "Description of tip 4." },
-    ],
+    theme: "Student Inconvenience",
+    title: "Motivation Streak App",
+    subtitle: "Turn school into a quest — and actually want to show up",
+    problem: `Staying motivated through a long semester is hard. Homework feels repetitive, progress is invisible, and it's easy to fall into a slump. Students often know what they need to do but just can't seem to start — especially when there's no immediate reward for doing it.`,
+    challenge: `Create a motivation and streak app that gamifies school subjects by turning assignments and study sessions into quest-based challenges with rewards, levels, and leaderboards. Add a social layer so students can see their friends' progress and compete or cheer each other on.`
+    // tips: [
+    //   { label: "Quest System", detail: "Let students log completed tasks as finished quests. Each subject is its own quest line with levels and milestones to unlock." },
+    //   { label: "Streaks & Rewards", detail: "Track daily study streaks and reward consistent effort with badges, XP, or custom titles (e.g., 'Math Wizard', 'Essay Machine')." },
+    //   { label: "Leaderboard", detail: "Display a class or friend-group leaderboard ranked by XP or streak length. Keep it fun and non-toxic — focus on personal bests too." },
+    //   { label: "Co-op Mode (Extra)", detail: "Let friends link accounts to see each other's progress in real time. Add a simple 'cheer' or reaction feature to encourage teammates." },
+    // ],
   },
   {
     number: 3,
-    theme: "Project 3 Theme",
-    title: "Project 3 Title",
-    subtitle: "Short subtitle describing the project",
-    problem: `[Problem description goes here.]`,
-    challenge: `[Challenge description goes here.]`,
-    tips: [
-      { label: "Tip 1", detail: "Description of tip 1." },
-      { label: "Tip 2", detail: "Description of tip 2." },
-      { label: "Tip 3", detail: "Description of tip 3." },
-      { label: "Tip 4", detail: "Description of tip 4." },
-    ],
+    theme: "Student Inconvenience",
+    title: "Smart Study Organizer",
+    subtitle: "One place for everything — notes, deadlines, and study plans",
+    problem: `When exam season hits, students scramble to piece together what they actually need to study. Notes are spread across notebooks, Google Docs, and random screenshots. Assignments are scattered across multiple platforms. There's no single place that ties it all together into a clear study plan.`,
+    challenge: `Design a smart study organizer that helps students consolidate their notes, assignments, deadlines, and study materials into one organized hub. The app should help students figure out what to review, in what order, and how much time to spend on each topic before their exam.`
+    // tips: [
+    //   { label: "Subject Dashboard", detail: "Give each class its own space where students can store notes, links, and uploaded files alongside upcoming deadlines." },
+    //   { label: "Study Plan Generator", detail: "When a student inputs an exam date and the topics they need to cover, automatically suggest a daily study schedule that spreads the work out." },
+    //   { label: "Progress Tracking", detail: "Let students check off topics as they review them and show an overall exam readiness percentage." },
+    //   { label: "Quick Capture", detail: "Include a fast way to jot down notes or paste links without navigating away from the current view — keeping the workflow smooth during crunch time." },
+    // ],
   },
 ];
 
@@ -80,14 +80,14 @@ function HackathonProjects() {
               <p className={styles.sectionLabel}>Challenge</p>
               <p className={styles.challengeDesc}>{project.challenge}</p>
 
-              <p className={styles.sectionLabel}>Tips to Consider</p>
-              <ul className={styles.objectivesList}>
-                {project.tips.map((tip, i) => (
-                  <li key={i}>
-                    <strong>{tip.label}:</strong> {tip.detail}
-                  </li>
-                ))}
-              </ul>
+              {/*<p className={styles.sectionLabel}>Tips to Consider</p>*/}
+              {/*<ul className={styles.objectivesList}>*/}
+              {/*  {project.tips.map((tip, i) => (*/}
+              {/*    <li key={i}>*/}
+              {/*      <strong>{tip.label}:</strong> {tip.detail}*/}
+              {/*    </li>*/}
+              {/*  ))}*/}
+              {/*</ul>*/}
 
             </div>
           ))}
