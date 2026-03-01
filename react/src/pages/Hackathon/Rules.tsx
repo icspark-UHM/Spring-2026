@@ -10,7 +10,7 @@ function Rules() {
       <HackathonNav />
 
       {/* Header Section */}
-    {/* This section creates the large dark header like the Projects page */}
+      {/* This section creates the large dark header like the Projects page */}
       <section className={`${styles.pageHeader} ${styles.pageHeaderHero}`}>
         <div className={styles.container}>
           <h1 className={`${styles.pageTitle} ${styles.pageTitleDark}`}>Hackathon Rules</h1>
@@ -21,14 +21,13 @@ function Rules() {
       {/* Content */}
       <section className={styles.contentSection}>
         <div className={styles.container}>
-
           {/* Eligibility & Registration */}
           <div className={styles.contentCard}>
             <h2><i className="bi bi-shield-check"></i> Eligibility & Registration</h2>
             <div className={styles.expectationGrid}>
               <div className={styles.expectationItem}>
                 <h3>Who Can Participate?</h3>
-                <p>Open to high school students only. Maximum of 4 members per team.</p>
+                <p>Open to middle school high school students only. Maximum of 4 members per team.</p>
               </div>
               <div className={styles.expectationItem}>
                 <h3>Registration</h3>
@@ -75,8 +74,12 @@ function Rules() {
               <div className={styles.expectationItem}>
                 <h3>Environment Setup</h3>
                 <p>
-                    <strong>Replit Projects: </strong>Set up your Replit project in advance with your chosen language/environment.<br /><br />
-                    <strong>Blank Slate: </strong>Your project can include necessary plugins or downloaded assets, but the actual content (code) must be blank at the start.
+                  <strong><a href="https://github.com/icspark-UHM/final-project-template"
+                             target="_blank"
+                             rel="noopener noreferrer" style={{ color: '#ffcc00'}}
+                  >Github Projects:</a>
+                  </strong> Set up your Github project in advance with your chosen language/environment. We have an example Github Project for you as a template/example. You do not need to use this for your project. <br /><br />
+                  <strong>Blank Slate: </strong>Your project can include necessary plugins or downloaded assets, but the actual content (code) must be blank at the start.
                 </p>
               </div>
             </div>
@@ -108,14 +111,14 @@ function Rules() {
               <div className={styles.expectationItem}>
                 <h3>Submission Deadline</h3>
                 <p>Projects must be submitted before the 4-hour window closes. Late submissions will not be considered. Teams should have already shared their project prior to competition:<br />
-                    <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfLD-clMA6G7aAXic0_haAvqhSo89z2Lnv0ktP0zGUz8I0WYA/viewform"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ color: 'var(--hackathon-accent)' }}
-                        >
-                        go.hawaii.edu/DJ8
-                    </a>
+                  <a
+                    href="https://go.hawaii.edu/5ED"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: '#ffcc00' }}
+                  >
+                    go.hawaii.edu/5ED
+                  </a>
                 </p>
               </div>
               <div className={styles.expectationItem}>
@@ -140,8 +143,8 @@ function Rules() {
               <div className={styles.expectationItem}>
                 <h3>Termination</h3>
                 <p>Destruction of property, illegal use of computer resources, or carrying weapons or illegal substances will result in immediate disqualification.
-                    Normal school rules apply, including following Title IX guidelines. 
-                    Any violation of the above will lead to immediate dismissal and depending on the case, reported to the UH Manoa Title IX Coordinator and authorities.
+                  Normal school rules apply, including following Title IX guidelines.
+                  Any violation of the above will lead to immediate dismissal and depending on the case, reported to the UH Manoa Title IX Coordinator and authorities.
                 </p>
               </div>
               <div className={styles.expectationItem}>
@@ -149,70 +152,73 @@ function Rules() {
                 <p>The goal is to learn, collaborate, and be creative. Enjoy the process, regardless of the outcome!</p>
               </div>
             </div>
-          </div>   
+          </div>
+
+          {/* Rules & Scoring */}
+          <div className={styles.contentCard}>
+            <h2>Scoring Criteria</h2>
+            <div className={styles.scoringGrid}>
+              {/* Header Row */}
+              <div className={`${styles.gridRow} ${styles.header}`}>
+                <div>Submission</div>
+                <div>Description</div>
+                <div>Scoring</div>
+              </div>
+
+              {/* Data Rows */}
+              <div className={styles.gridRow}>
+                <div className={styles.category}>Submission</div>
+                <div className={styles.description}>Did the group submit their project?</div>
+                <div className={styles.score}> ___ / 10 </div>
+              </div>
+
+              {/* Creativity */}
+              <div className={styles.gridRow}>
+                <div className={styles.category}>Creativity</div>
+                <div className={styles.description}>How original and creative is the idea? Does it introduce a new or unique solution</div>
+                <div className={styles.score}> ___ / 35 </div>
+              </div>
+
+              {/* Technical Difficulty */}
+              <div className={styles.gridRow}>
+                <div className={styles.category}>Technical Difficulty</div>
+                <div className={styles.description}>Does the project work as intended?</div>
+                <div className={styles.score}> ___ / 25 </div>
+              </div>
+
+              {/* Technical Difficulty */}
+              <div className={styles.gridRow}>
+                <div className={styles.category}>User Experience</div>
+                <div className={styles.description}>Is the design user-friendly and visually appealing?</div>
+                <div className={styles.score}> ___ / 10 </div>
+              </div>
+
+              {/* User Experience */}
+              <div className={styles.gridRow}>
+                <div className={styles.category}>Presentation Skills</div>
+                <div className={styles.description}>How well was the team to explain their project? Did the team clearly share their problem, solution, and impact?</div>
+                <div className={styles.score}> ___ / 20 </div>
+              </div>
+
+              {/* Repeat for other categories... */}
+
+              <div className={`${styles.gridRow} ${styles.total}`}>
+                <div className={styles.category}>Total</div>
+                <div className={styles.description}>The sum of all scores across the categories above.</div>
+                <div className={styles.score}> ___ / 100 </div>
+              </div>
+            </div>
+
+          </div>
 
         </div>
       </section>
 
-      {/* Rules & Scoring */}
-      <div className={styles.contentCard}>
-        <h2>Scoring Criteria</h2>
-        <div className={styles.scoringGrid}>
-          {/* Header Row */}
-          <div className={`${styles.gridRow} ${styles.header}`}>
-            <div>Submission</div>
-            <div>Description</div>
-            <div>Scoring</div>
-          </div>
 
-          {/* Data Rows */}
-          <div className={styles.gridRow}>
-            <div className={styles.category}>Submission</div>
-            <div className={styles.description}>Did the group submit their project?</div>
-            <div className={styles.score}> ___ / 10 </div>
-          </div>
-
-          {/* Creativity */}
-          <div className={styles.gridRow}>
-            <div className={styles.category}>Creativity</div>
-            <div className={styles.description}>How original and creative is the idea? Does it introduce a new or unique solution</div>
-            <div className={styles.score}> ___ / 35 </div>
-          </div>
-
-          {/* Technical Difficulty */}
-          <div className={styles.gridRow}>
-            <div className={styles.category}>Technical Difficulty</div>
-            <div className={styles.description}>Does the project work as intended?</div>
-            <div className={styles.score}> ___ / 25 </div>
-          </div>
-
-          {/* Technical Difficulty */}
-          <div className={styles.gridRow}>
-            <div className={styles.category}>User Experience</div>
-            <div className={styles.description}>Is the design user-friendly and visually appealing?</div>
-            <div className={styles.score}> ___ / 10 </div>
-          </div> 
-
-          {/* User Experience */}
-          <div className={styles.gridRow}>
-            <div className={styles.category}>Presentation Skills</div>
-            <div className={styles.description}>How well was the team to explain their project? Did the team clearly share their problem, solution, and impact?</div>
-            <div className={styles.score}> ___ / 20 </div>
-          </div>    
-          
-          {/* Repeat for other categories... */}
-
-          <div className={`${styles.gridRow} ${styles.total}`}>
-            <div className={styles.category}>Total</div>
-            <div className={styles.description}>The sum of all scores across the categories above.</div>
-            <div className={styles.score}> ___ / 100 </div>
-          </div>
-        </div>
-      </div>
 
       <Footer />
     </div>
-  );
+);
 }
 
 export default Rules;

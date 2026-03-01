@@ -13,10 +13,18 @@ function HackathonNav() {
         </div>
         <div className={styles.navLinks}>
           <Link to="/hackathon" className={styles.navLink}>Home</Link>
-          <Link to="/hackathon/info" className={styles.navLink}>Info</Link>
+          {/*<Link to="/hackathon/info" className={styles.navLink}>Info</Link>*/}
           <Link to="/hackathon/projects" className={styles.navLink}>Projects</Link>
           <Link to="/hackathon/rules" className={styles.navLink}>Rules & Scoring</Link>
           <Link to="/hackathon/schedule" className={styles.navLink}>Schedule</Link>
+          <a
+          href="https://go.hawaii.edu/EUD"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.registerBtn}
+          >
+          Register
+        </a>
 
         </div>
       </div>

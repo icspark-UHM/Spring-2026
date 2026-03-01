@@ -1041,7 +1041,7 @@
 .ruleCard {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(0, 217, 255, 0.2);
-  border-radius: 12px;
+  /*border-radius: 12px;*/
   padding: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -1049,13 +1049,13 @@
 .ruleCard h3 {
   color: var(--hackathon-accent);
   margin-top: 0;
-  margin-bottom: 1rem;
+  /*margin-bottom: 1rem;*/
 }
 
 .ruleCard p {
   color: #d0d0d0;
   line-height: 1.7;
-  margin: 0.75rem 0;
+  /*margin: 0.75rem 0;*/
 }
 
 .scoringTable {
@@ -1066,11 +1066,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  /*padding: 1.5rem;*/
   background: rgba(255, 255, 255, 0.03);
   border-left: 4px solid var(--hackathon-accent);
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  /*border-radius: 8px;*/
+  /*margin-bottom: 1rem;*/
   transition: all 0.3s ease;
 }
 
@@ -1081,7 +1081,7 @@
 
 .scoreCategory h4 {
   color: var(--hackathon-accent);
-  margin: 0 0 0.5rem 0;
+  /*margin: 0 0 0.5rem 0;*/
 }
 
 .scoreCategory p {
@@ -1099,15 +1099,15 @@
   font-size: 1.2rem;
   font-weight: 800;
   text-align: center;
-  min-width: 100px;
+  /*min-width: 100px;*/
 }
 
 /* Scoring Grid Table */
 .scoringGrid {
   display: grid;
-  width: 100%;
+  /*width: 100%;*/
   border: 1px solid #333;
-  border-radius: 8px;
+  /*border-radius: 8px;*/
   overflow: hidden;
 }
 
