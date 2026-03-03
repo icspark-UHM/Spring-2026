@@ -23,7 +23,7 @@ function HackathonHome() {
               <span className={styles.logoText}>SWITCH</span>
               <span className={styles.logoSubtext}>Supporting Wellness in Technology Computing Hawaii</span>
             </div>
-            <span className={styles.plusSign}>x</span>
+            <span className={styles.plusSign} style={{color: "black"}}>x</span>
             <div className={styles.torchLogo}>
               <span className={styles.logoText}>ICSpark</span>
               <span className={styles.logoSubtext}>Web Development Program</span>
@@ -73,9 +73,9 @@ function HackathonHome() {
               <div className={styles.cardIcon}>
                 <i className="bi bi-laptop"></i>
               </div>
-              <h3>What</h3>
-              <p>Learn about the hackathon objectives</p>
-              <Link to="/hackathon/about" className={styles.cardLink}>Learn More →</Link>
+              <h3>Projects</h3>
+              <p>Learn about this year's theme and available projects</p>
+              <Link to="/hackathon/projects" className={styles.cardLink}>View Projects →</Link>
             </div>
 
             <div className={styles.infoCard}>

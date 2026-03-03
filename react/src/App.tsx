@@ -19,6 +19,10 @@ import HackathonRules from './pages/Hackathon/Rules'; //Scoring criteria is incl
 import HackathonSchedule from "./pages/Hackathon/Schedule";
 import HackathonAbout from "./pages/Hackathon/About";
 
+// helps in directing pages to the top
+// @ts-expect-error || error since it have a ts value of any
+import ScrollToTop from "./components/hackathon/ScrollToTop";
+
 function App() {
   return (
     // <BrowserRouter basename={import.meta.env.BASE_URL}>
@@ -37,6 +41,7 @@ function App() {
     // </BrowserRouter>
   <HashRouter>
     <div className="App">
+      <ScrollToTop />
       <Routes>
         {/* Main site routes - with Header/Footer */}
         <Route path="/" element={

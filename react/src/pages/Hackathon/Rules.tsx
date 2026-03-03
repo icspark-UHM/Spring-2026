@@ -127,7 +127,19 @@ function Rules() {
               </div>
               <div className={styles.expectationItem}>
                 <h3>Judging Criteria</h3>
-                <p>See judging section for more information</p>
+                <p>See the {" "} 
+
+                    <a
+                    href="#scoring-section"
+                    style={{ color: '#ffcc00', cursor: 'pointer' }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById('scoring-section')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+
+                    >scoring criteria </a>
+                   
+                   {" "}for more information</p>
               </div>
             </div>
           </div>
@@ -156,7 +168,7 @@ function Rules() {
 
           {/* Rules & Scoring */}
           <div className={styles.contentCard}>
-            <h2>Scoring Criteria</h2>
+            <h2 id="scoring-section">Scoring Criteria</h2>
             <div className={styles.scoringGrid}>
               {/* Header Row */}
               <div className={`${styles.gridRow} ${styles.header}`}>
