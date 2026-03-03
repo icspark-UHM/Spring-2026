@@ -12,6 +12,7 @@ function HackathonSchedule() {
         <div className={styles.container}>
           <h1 className={`${styles.pageTitle} ${styles.pageTitleDark}`}>Hackathon Schedule</h1>
           <p className={`${styles.pageSubtitle} ${styles.pageSubtitleDark}`}>Timeline and location for the Spring 2026 Hackathon</p>
+          <p className={`${styles.pageSubtitle} ${styles.pageSubtitleDark}`}><strong>March 14, 2026</strong></p>
         </div>
       </section>
 
@@ -62,6 +63,7 @@ function HackathonSchedule() {
       <section className={styles.contentSection} style={{ paddingTop: 0 }}>
         <div className={styles.container}>
           <div className={styles.contentCard}>
+            <h2>Date of Competition: March 14, 2026</h2>
             <h2>Event Timeline</h2>
             <div className={styles.scheduleTimeline}>
 
