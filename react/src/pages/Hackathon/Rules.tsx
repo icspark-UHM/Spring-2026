@@ -90,8 +90,8 @@ function Rules() {
             <h2><i className="bi bi-heart"></i> Conduct & Fair Play</h2>
             <div className={styles.expectationGrid}>
               <div className={styles.expectationItem}>
-                <h3>Original Work</h3>
-                <p>All code and project content must be created during the hackathon. AI, open-source libraries, and tools are allowed, but the main project logic should be original/creative.</p>
+                <h3>Original Work & AI Usage</h3>
+                <p>All code and project content must be created during the hackathon. AI (e.g ChatGPT, Github Copilot, Claude), open-source libraries, and other software tools are <strong>allowed</strong> throughout the phases of your project, but the main project logic should be original/creative.</p>
               </div>
               <div className={styles.expectationItem}>
                 <h3>Collaboration</h3>
