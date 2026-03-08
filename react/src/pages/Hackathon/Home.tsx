@@ -101,6 +101,36 @@ function HackathonHome() {
         </div>
       </section>
 
+      {/* Volunteer Info */}
+      <section className={styles.aboutSection}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>Volunteer with Us</h2>
+          <p className={styles.welcomeText}>
+            Do you want to mentor/support the next generation of tech innovators?
+            We are looking for motivated hackathon volunteers to help with: 
+            <strong> Setup/Breakdown</strong>,
+            <strong> Hackathon Moderators</strong>,
+            <strong> Workshop</strong>,
+            <strong> Sign-in</strong> and,
+            <strong> Food Servers</strong>.
+          </p>
+
+          <br />
+
+          <p className={styles.welcomeText}>
+            Interested? Please sign-up using this {" "} 
+            <a
+              href="https://forms.gle/KLNR4XruesDuZACz9"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#ffcc00' }}
+            >form</a>.
+      
+            See you then!
+          </p>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
