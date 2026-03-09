@@ -166,62 +166,277 @@ function Rules() {
             </div>
           </div>
 
-          {/* Rules & Scoring */}
+          {/* ── SCORING RUBRIC ── */}
           <div className={styles.contentCard}>
-            <h2 id="scoring-section">Scoring Criteria</h2>
-            <div className={styles.scoringGrid}>
-              {/* Header Row */}
-              <div className={`${styles.gridRow} ${styles.header}`}>
-                <div>Submission</div>
-                <div>Description</div>
-                <div>Scoring</div>
+            <h2 id="scoring-section"><i className="bi bi-trophy"></i> Scoring Criteria</h2>
+            <p style={{ color: '#b0b0b0', marginBottom: '2rem' }}>
+              100 points total — judges score each category independently using the rubric below.
+            </p>
+
+            <div className={styles.rubricTable}>
+
+              {/* Column headers */}
+              <div className={styles.rubricHeaderRow}>
+                <div className={styles.rubricCatCol}>Category</div>
+                <div className={styles.rubricLevelCol}>Level 1</div>
+                <div className={styles.rubricLevelCol}>Level 2</div>
+                <div className={styles.rubricLevelCol}>Level 3</div>
+                <div className={styles.rubricLevelCol}>Level 4</div>
+                <div className={styles.rubricLevelCol}>Level 5</div>
+                <div className={styles.rubricLevelCol}>Level 6</div>
               </div>
 
-              {/* Data Rows */}
-              <div className={styles.gridRow}>
-                <div className={styles.category}>Submission</div>
-                <div className={styles.description}>Did the group submit their project?</div>
-                <div className={styles.score}> ___ / 10 </div>
+              {/* 📬 Submission — 3 levels */}
+              <div className={styles.rubricRow}>
+                <div className={`${styles.rubricCatCol} ${styles.rubricCatCell}`}>
+                  <span className={styles.rubricEmoji}>📬</span>
+                  <span className={styles.rubricCatName}>Submission</span>
+                  <span className={styles.rubricPts}>/ 10 pts</span>
+                  <span className={styles.rubricDesc}>Did the group submit their project?</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricBest}`}>
+                  <span className={styles.rubricScore}>10</span>
+                  <span className={styles.rubricLabel}>Full Credit</span>
+                  <span className={styles.rubricHint}>Fully submitted on time</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricMid}`}>
+                  <span className={styles.rubricScore}>5</span>
+                  <span className={styles.rubricLabel}>Partial</span>
+                  <span className={styles.rubricHint}>Late or incomplete submission</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricNone}`}>
+                  <span className={styles.rubricScore}>0</span>
+                  <span className={styles.rubricLabel}>No Credit</span>
+                  <span className={styles.rubricHint}>No submission</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricEmpty}`}></div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricEmpty}`}></div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricEmpty}`}></div>
               </div>
 
-              {/* Creativity */}
-              <div className={styles.gridRow}>
-                <div className={styles.category}>Creativity</div>
-                <div className={styles.description}>How original and creative is the idea? Does it introduce a new or unique solution</div>
-                <div className={styles.score}> ___ / 35 </div>
+              {/* 🎨 Creativity — 6 levels */}
+              <div className={styles.rubricRow}>
+                <div className={`${styles.rubricCatCol} ${styles.rubricCatCell}`}>
+                  <span className={styles.rubricEmoji}>🎨</span>
+                  <span className={styles.rubricCatName}>Creativity</span>
+                  <span className={styles.rubricPts}>/ 35 pts</span>
+                  <span className={styles.rubricDesc}>How original and creative is the idea?</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricBest}`}>
+                  <span className={styles.rubricScore}>35</span>
+                  <span className={styles.rubricLabel}>Exceptional</span>
+                  <span className={styles.rubricHint}>Highly original, surprising, and inventive</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricMid}`}>
+                  <span className={styles.rubricScore}>28</span>
+                  <span className={styles.rubricLabel}>Strong</span>
+                  <span className={styles.rubricHint}>Fresh idea with clear creative thought</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricOk}`}>
+                  <span className={styles.rubricScore}>21</span>
+                  <span className={styles.rubricLabel}>Good</span>
+                  <span className={styles.rubricHint}>Some originality, builds on existing ideas</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricLow}`}>
+                  <span className={styles.rubricScore}>14</span>
+                  <span className={styles.rubricLabel}>Fair</span>
+                  <span className={styles.rubricHint}>Conventional approach, limited novelty</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricNone}`}>
+                  <span className={styles.rubricScore}>7</span>
+                  <span className={styles.rubricLabel}>Weak</span>
+                  <span className={styles.rubricHint}>Little creative effort evident</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricNone}`}>
+                  <span className={styles.rubricScore}>0</span>
+                  <span className={styles.rubricLabel}>None</span>
+                  <span className={styles.rubricHint}>No original thinking demonstrated</span>
+                </div>
               </div>
 
-              {/* Technical Difficulty */}
-              <div className={styles.gridRow}>
-                <div className={styles.category}>Technical Difficulty</div>
-                <div className={styles.description}>Does the project work as intended?</div>
-                <div className={styles.score}> ___ / 25 </div>
+              {/* ⚙️ Technical Difficulty — 6 levels */}
+              <div className={styles.rubricRow}>
+                <div className={`${styles.rubricCatCol} ${styles.rubricCatCell}`}>
+                  <span className={styles.rubricEmoji}>⚙️</span>
+                  <span className={styles.rubricCatName}>Technical Difficulty</span>
+                  <span className={styles.rubricPts}>/ 25 pts</span>
+                  <span className={styles.rubricDesc}>Does the project work as intended?</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricBest}`}>
+                  <span className={styles.rubricScore}>25</span>
+                  <span className={styles.rubricLabel}>Excellent</span>
+                  <span className={styles.rubricHint}>Fully functional and technically impressive</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricMid}`}>
+                  <span className={styles.rubricScore}>20</span>
+                  <span className={styles.rubricLabel}>Good</span>
+                  <span className={styles.rubricHint}>Works well with minor issues</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricOk}`}>
+                  <span className={styles.rubricScore}>15</span>
+                  <span className={styles.rubricLabel}>Partial</span>
+                  <span className={styles.rubricHint}>Core features work, some bugs</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricLow}`}>
+                  <span className={styles.rubricScore}>10</span>
+                  <span className={styles.rubricLabel}>Limited</span>
+                  <span className={styles.rubricHint}>Significant functionality missing</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricNone}`}>
+                  <span className={styles.rubricScore}>5</span>
+                  <span className={styles.rubricLabel}>Broken</span>
+                  <span className={styles.rubricHint}>Barely functional</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricNone}`}>
+                  <span className={styles.rubricScore}>0</span>
+                  <span className={styles.rubricLabel}>None</span>
+                  <span className={styles.rubricHint}>Does not work</span>
+                </div>
               </div>
 
-              {/* Technical Difficulty */}
-              <div className={styles.gridRow}>
-                <div className={styles.category}>User Experience</div>
-                <div className={styles.description}>Is the design user-friendly and visually appealing?</div>
-                <div className={styles.score}> ___ / 10 </div>
+              {/* ✨ User Experience — 5 levels */}
+              <div className={styles.rubricRow}>
+                <div className={`${styles.rubricCatCol} ${styles.rubricCatCell}`}>
+                  <span className={styles.rubricEmoji}>✨</span>
+                  <span className={styles.rubricCatName}>User Experience</span>
+                  <span className={styles.rubricPts}>/ 10 pts</span>
+                  <span className={styles.rubricDesc}>Is the design user-friendly and visually appealing?</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricBest}`}>
+                  <span className={styles.rubricScore}>10</span>
+                  <span className={styles.rubricLabel}>Excellent</span>
+                  <span className={styles.rubricHint}>Intuitive, polished, and delightful</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricMid}`}>
+                  <span className={styles.rubricScore}>7</span>
+                  <span className={styles.rubricLabel}>Good</span>
+                  <span className={styles.rubricHint}>Easy to use, visually solid</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricOk}`}>
+                  <span className={styles.rubricScore}>4</span>
+                  <span className={styles.rubricLabel}>Fair</span>
+                  <span className={styles.rubricHint}>Functional but rough around edges</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricLow}`}>
+                  <span className={styles.rubricScore}>1</span>
+                  <span className={styles.rubricLabel}>Poor</span>
+                  <span className={styles.rubricHint}>Confusing or unappealing design</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricNone}`}>
+                  <span className={styles.rubricScore}>0</span>
+                  <span className={styles.rubricLabel}>None</span>
+                  <span className={styles.rubricHint}>No UX consideration</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricEmpty}`}></div>
               </div>
 
-              {/* User Experience */}
-              <div className={styles.gridRow}>
-                <div className={styles.category}>Presentation Skills</div>
-                <div className={styles.description}>How well was the team to explain their project? Did the team clearly share their problem, solution, and impact?</div>
-                <div className={styles.score}> ___ / 20 </div>
+              {/* 🎤 Presentation Skills — 5 levels */}
+              <div className={styles.rubricRow}>
+                <div className={`${styles.rubricCatCol} ${styles.rubricCatCell}`}>
+                  <span className={styles.rubricEmoji}>🎤</span>
+                  <span className={styles.rubricCatName}>Presentation Skills</span>
+                  <span className={styles.rubricPts}>/ 20 pts</span>
+                  <span className={styles.rubricDesc}>How well did the team explain their project?</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricBest}`}>
+                  <span className={styles.rubricScore}>20</span>
+                  <span className={styles.rubricLabel}>Outstanding</span>
+                  <span className={styles.rubricHint}>Compelling, clear, confident delivery</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricMid}`}>
+                  <span className={styles.rubricScore}>15</span>
+                  <span className={styles.rubricLabel}>Strong</span>
+                  <span className={styles.rubricHint}>Clear explanation with good structure</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricOk}`}>
+                  <span className={styles.rubricScore}>10</span>
+                  <span className={styles.rubricLabel}>Adequate</span>
+                  <span className={styles.rubricHint}>Gets the point across, some gaps</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricLow}`}>
+                  <span className={styles.rubricScore}>5</span>
+                  <span className={styles.rubricLabel}>Weak</span>
+                  <span className={styles.rubricHint}>Hard to follow or incomplete</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricNone}`}>
+                  <span className={styles.rubricScore}>0</span>
+                  <span className={styles.rubricLabel}>None</span>
+                  <span className={styles.rubricHint}>No meaningful presentation</span>
+                </div>
+                <div className={`${styles.rubricLevelCol} ${styles.rubricEmpty}`}></div>
               </div>
 
-              {/* Repeat for other categories... */}
+              {/*/!* Total *!/*/}
+              {/*<div className={styles.rubricTotalRow}>*/}
+              {/*  <div className={styles.rubricCatCol}>*/}
+              {/*    <span className={styles.rubricEmoji}>🏆</span>*/}
+              {/*    <span className={styles.rubricCatName}>Total</span>*/}
+              {/*    <span className={styles.rubricDesc}>The sum of all scores across the categories above.</span>*/}
+              {/*  </div>*/}
+              {/*  /!*<div className={styles.rubricTotalScore}>*!/*/}
+              {/*  /!*  ___ / 100 pts*!/*/}
+              {/*  /!*</div>*!/*/}
+              {/*</div>*/}
 
-              <div className={`${styles.gridRow} ${styles.total}`}>
-                <div className={styles.category}>Total</div>
-                <div className={styles.description}>The sum of all scores across the categories above.</div>
-                <div className={styles.score}> ___ / 100 </div>
-              </div>
             </div>
-
           </div>
+
+          {/* Rules & Scoring */}
+          {/*<div className={styles.contentCard}>*/}
+          {/*  <h2 id="scoring-section">Scoring Criteria</h2>*/}
+          {/*  <div className={styles.scoringGrid}>*/}
+          {/*    /!* Header Row *!/*/}
+          {/*    <div className={`${styles.gridRow} ${styles.header}`}>*/}
+          {/*      <div>Submission</div>*/}
+          {/*      <div>Description</div>*/}
+          {/*      <div>Scoring</div>*/}
+          {/*    </div>*/}
+
+          {/*    /!* Data Rows *!/*/}
+          {/*    <div className={styles.gridRow}>*/}
+          {/*      <div className={styles.category}>Submission</div>*/}
+          {/*      <div className={styles.description}>Did the group submit their project?</div>*/}
+          {/*      <div className={styles.score}> ___ / 10 </div>*/}
+          {/*    </div>*/}
+
+          {/*    /!* Creativity *!/*/}
+          {/*    <div className={styles.gridRow}>*/}
+          {/*      <div className={styles.category}>Creativity</div>*/}
+          {/*      <div className={styles.description}>How original and creative is the idea? Does it introduce a new or unique solution</div>*/}
+          {/*      <div className={styles.score}> ___ / 35 </div>*/}
+          {/*    </div>*/}
+
+          {/*    /!* Technical Difficulty *!/*/}
+          {/*    <div className={styles.gridRow}>*/}
+          {/*      <div className={styles.category}>Technical Difficulty</div>*/}
+          {/*      <div className={styles.description}>Does the project work as intended?</div>*/}
+          {/*      <div className={styles.score}> ___ / 25 </div>*/}
+          {/*    </div>*/}
+
+          {/*    /!* Technical Difficulty *!/*/}
+          {/*    <div className={styles.gridRow}>*/}
+          {/*      <div className={styles.category}>User Experience</div>*/}
+          {/*      <div className={styles.description}>Is the design user-friendly and visually appealing?</div>*/}
+          {/*      <div className={styles.score}> ___ / 10 </div>*/}
+          {/*    </div>*/}
+
+          {/*    /!* User Experience *!/*/}
+          {/*    <div className={styles.gridRow}>*/}
+          {/*      <div className={styles.category}>Presentation Skills</div>*/}
+          {/*      <div className={styles.description}>How well was the team to explain their project? Did the team clearly share their problem, solution, and impact?</div>*/}
+          {/*      <div className={styles.score}> ___ / 20 </div>*/}
+          {/*    </div>*/}
+
+          {/*    /!* Repeat for other categories... *!/*/}
+
+          {/*    <div className={`${styles.gridRow} ${styles.total}`}>*/}
+          {/*      <div className={styles.category}>Total</div>*/}
+          {/*      <div className={styles.description}>The sum of all scores across the categories above.</div>*/}
+          {/*      <div className={styles.score}> ___ / 100 </div>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+
+          {/*</div>*/}
 
         </div>
       </section>

@@ -11,7 +11,7 @@ function HackathonSchedule() {
       <section className={`${styles.pageHeader} ${styles.pageHeaderHero}`}>
         <div className={styles.container}>
           <h1 className={`${styles.pageTitle} ${styles.pageTitleDark}`}>Hackathon Schedule</h1>
-          <p className={`${styles.pageSubtitle} ${styles.pageSubtitleDark}`}>Timeline and location for the Spring 2026 Hackathon</p>
+          <p className={`${styles.pageSubtitle} ${styles.pageSubtitleDark}`}>Timeline and location for the Spring 2026 Hackathongith</p>
           <p className={`${styles.pageSubtitle} ${styles.pageSubtitleDark}`}><strong>March 14, 2026</strong></p>
         </div>
       </section>

@@ -1462,3 +1462,284 @@
     display: none;
   }
 }
+
+
+/* ============================================================ */
+/* 17. SCORING RUBRIC TABLE                                     */
+/* ============================================================ */
+
+.rubricTable {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Header row */
+.rubricHeaderRow {
+  display: grid;
+  grid-template-columns: 220px repeat(6, 1fr);
+  background: rgba(0, 217, 255, 0.12);
+  border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+}
+
+.rubricHeaderRow > div {
+  padding: 12px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--hackathon-accent);
+  text-align: center;
+}
+
+.rubricHeaderRow > div:first-child {
+  text-align: left;
+  border-right: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+/* Data rows */
+.rubricRow {
+  display: grid;
+  grid-template-columns: 220px repeat(6, 1fr);
+  border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+  transition: background 0.2s ease;
+}
+
+.rubricRow:last-of-type {
+  border-bottom: none;
+}
+
+.rubricRow:hover {
+  background: rgba(0, 217, 255, 0.03);
+}
+
+/* Category column */
+.rubricCatCol {
+  border-right: 1px solid rgba(0, 217, 255, 0.2);
+  padding: 16px 14px;
+}
+
+.rubricCatCell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rubricEmoji {
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.rubricCatName {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.rubricPts {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--hackathon-torch);
+  letter-spacing: 0.5px;
+}
+
+.rubricDesc {
+  font-size: 0.78rem;
+  color: #888;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+/* Level columns */
+.rubricLevelCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 10px;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 4px;
+  min-height: 100px;
+}
+
+.rubricLevelCol:last-child {
+  border-right: none;
+}
+
+.rubricScore {
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.rubricLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.rubricHint {
+  font-size: 0.7rem;
+  color: #888;
+  line-height: 1.3;
+}
+
+/* Level color variants */
+.rubricBest {
+  background: rgba(6, 255, 165, 0.08);
+  border-top: 3px solid var(--hackathon-green);
+}
+.rubricBest .rubricScore { color: var(--hackathon-green); }
+.rubricBest .rubricLabel { color: var(--hackathon-green); }
+
+.rubricMid {
+  background: rgba(0, 217, 255, 0.06);
+  border-top: 3px solid var(--hackathon-accent);
+}
+.rubricMid .rubricScore { color: var(--hackathon-accent); }
+.rubricMid .rubricLabel { color: var(--hackathon-accent); }
+
+.rubricOk {
+  background: rgba(255, 204, 0, 0.05);
+  border-top: 3px solid var(--hackathon-torch);
+}
+.rubricOk .rubricScore { color: var(--hackathon-torch); }
+.rubricOk .rubricLabel { color: var(--hackathon-torch); }
+
+.rubricLow {
+  background: rgba(255, 99, 71, 0.05);
+  border-top: 3px solid var(--hackathon-coral);
+}
+.rubricLow .rubricScore { color: var(--hackathon-coral); }
+.rubricLow .rubricLabel { color: var(--hackathon-coral); }
+
+.rubricNone {
+  background: rgba(157, 78, 221, 0.05);
+  border-top: 3px solid var(--hackathon-purple);
+}
+.rubricNone .rubricScore { color: var(--hackathon-purple); }
+.rubricNone .rubricLabel { color: var(--hackathon-purple); }
+
+.rubricEmpty {
+  background: rgba(255, 255, 255, 0.01);
+  border-top: 3px solid transparent;
+}
+
+/* Total row */
+.rubricTotalRow {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  background: rgba(255, 204, 0, 0.06);
+  border-top: 2px solid rgba(255, 204, 0, 0.3);
+}
+
+.rubricTotalRow .rubricCatCol {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 14px;
+}
+
+.rubricTotalScore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--hackathon-torch);
+  letter-spacing: 2px;
+  padding: 16px;
+  font-family: monospace;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .rubricHeaderRow,
+  .rubricRow {
+    grid-template-columns: 160px repeat(5, 1fr);
+  }
+
+  .rubricTotalRow {
+    grid-template-columns: 160px 1fr;
+  }
+
+  .rubricCatName {
+    font-size: 0.85rem;
+  }
+
+  .rubricScore {
+    font-size: 1.1rem;
+  }
+
+  .rubricLevelCol {
+    padding: 10px 6px;
+    min-height: 80px;
+  }
+}
+
+@media (max-width: 640px) {
+  .rubricTable {
+    border-radius: 8px;
+  }
+
+  .rubricHeaderRow {
+    display: none;
+  }
+
+  .rubricRow {
+    grid-template-columns: 1fr;
+    border-bottom: 2px solid rgba(0, 217, 255, 0.15);
+  }
+
+  .rubricCatCol {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+    background: rgba(0, 217, 255, 0.05);
+  }
+
+  .rubricLevelCol {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 10px 14px;
+    min-height: unset;
+    border-right: none;
+    border-top: none;
+    border-left: 3px solid transparent;
+    text-align: left;
+  }
+
+  .rubricBest  { border-left-color: var(--hackathon-green); }
+  .rubricMid   { border-left-color: var(--hackathon-accent); }
+  .rubricOk    { border-left-color: var(--hackathon-torch); }
+  .rubricLow   { border-left-color: var(--hackathon-coral); }
+  .rubricNone  { border-left-color: var(--hackathon-purple); }
+  .rubricEmpty { display: none; }
+
+  .rubricScore {
+    font-size: 1.2rem;
+    min-width: 36px;
+  }
+
+  .rubricHint {
+    display: none;
+  }
+
+  .rubricTotalRow {
+    grid-template-columns: 1fr;
+  }
+
+  .rubricTotalScore {
+    font-size: 1.4rem;
+    padding: 12px;
+    border-top: 1px solid rgba(255, 204, 0, 0.2);
+  }
+}
