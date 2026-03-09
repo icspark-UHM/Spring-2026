@@ -254,43 +254,38 @@ function Rules() {
                 </div>
               </div>
 
-              {/* ⚙️ Technical Difficulty — 6 levels */}
+              {/* ⚙️ Technical Implementation — 5 levels */}
               <div className={styles.rubricRow}>
                 <div className={`${styles.rubricCatCol} ${styles.rubricCatCell}`}>
                   <span className={styles.rubricEmoji}>⚙️</span>
-                  <span className={styles.rubricCatName}>Technical Difficulty</span>
+                  <span className={styles.rubricCatName}>Technical Implementation</span>
                   <span className={styles.rubricPts}>/ 25 pts</span>
-                  <span className={styles.rubricDesc}>Does the project work as intended?</span>
+                  <span className={styles.rubricDesc}>Can the student(s) walk through their code?</span>
                 </div>
                 <div className={`${styles.rubricLevelCol} ${styles.rubricBest}`}>
                   <span className={styles.rubricScore}>25</span>
                   <span className={styles.rubricLabel}>Excellent</span>
-                  <span className={styles.rubricHint}>Fully functional and technically impressive</span>
+                  <span className={styles.rubricHint}>Does a code walkthrough, highlighting the core technical features of the app, and the limitations and shortcomings</span>
                 </div>
                 <div className={`${styles.rubricLevelCol} ${styles.rubricMid}`}>
                   <span className={styles.rubricScore}>20</span>
                   <span className={styles.rubricLabel}>Good</span>
-                  <span className={styles.rubricHint}>Works well with minor issues</span>
+                  <span className={styles.rubricHint}>Does a code walkthrough, highlighting the core technical features of the app</span>
                 </div>
                 <div className={`${styles.rubricLevelCol} ${styles.rubricOk}`}>
                   <span className={styles.rubricScore}>15</span>
                   <span className={styles.rubricLabel}>Partial</span>
-                  <span className={styles.rubricHint}>Core features work, some bugs</span>
+                  <span className={styles.rubricHint}>Discuss the implementation, but no code walkthrough.</span>
                 </div>
                 <div className={`${styles.rubricLevelCol} ${styles.rubricLow}`}>
-                  <span className={styles.rubricScore}>10</span>
-                  <span className={styles.rubricLabel}>Limited</span>
-                  <span className={styles.rubricHint}>Significant functionality missing</span>
-                </div>
-                <div className={`${styles.rubricLevelCol} ${styles.rubricNone}`}>
-                  <span className={styles.rubricScore}>5</span>
-                  <span className={styles.rubricLabel}>Broken</span>
-                  <span className={styles.rubricHint}>Barely functional</span>
+                  <span className={styles.rubricScore}>7</span>
+                  <span className={styles.rubricLabel}>Very Limited</span>
+                  <span className={styles.rubricHint}>Barely discusses the technical implementation</span>
                 </div>
                 <div className={`${styles.rubricLevelCol} ${styles.rubricNone}`}>
                   <span className={styles.rubricScore}>0</span>
                   <span className={styles.rubricLabel}>None</span>
-                  <span className={styles.rubricHint}>Does not work</span>
+                  <span className={styles.rubricHint}>Does not discuss the technical implementation</span>
                 </div>
               </div>
 
