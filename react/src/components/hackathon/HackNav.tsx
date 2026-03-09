@@ -1,32 +1,53 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './HackNav.module.css';
 
 function HackathonNav() {
+  const [navOpen, setNavOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path: string) =>
+    location.pathname === path ? styles.active : '';
+
+  const closeNav = () => setNavOpen(false);
+
   return (
-    <nav className={styles.hackathonNav}>
-      <div className={styles.navContainer}>
-        <div className={styles.navBrand}>
-          {/*<Link to="/" className={styles.backLink}>← Back to ICSpark</Link>*/}
+    <nav className={styles.nav}>
+      <div className={styles.inner}>
+        {/* Brand */}
+        <Link to="/hackathon" className={styles.brand} onClick={closeNav}>
+          <span className={styles.brandMain}>SWITCH</span>
+          <span className={styles.brandSep}>×</span>
+          <span className={styles.brandSub}>ICSpark</span>
+        </Link>
 
-            {/*<img src={logo} alt="ICSpark Logo" className={styles.logo} />*/}
-            <span className="brand-text">SWITCH x ICSpark</span>
-        </div>
-        <div className={styles.navLinks}>
-          <Link to="/hackathon" className={styles.navLink}>Home</Link>
-          {/*<Link to="/hackathon/info" className={styles.navLink}>Info</Link>*/}
-          <Link to="/hackathon/projects" className={styles.navLink}>Projects</Link>
-          <Link to="/hackathon/rules" className={styles.navLink}>Rules & Scoring</Link>
-          <Link to="/hackathon/schedule" className={styles.navLink}>Schedule</Link>
+        {/* Hamburger */}
+        <button
+          className={`${styles.toggle} ${navOpen ? styles.toggleOpen : ''}`}
+          aria-label="Toggle navigation"
+          aria-expanded={navOpen}
+          onClick={() => setNavOpen(!navOpen)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        {/* Links */}
+        <ul className={`${styles.links} ${navOpen ? styles.open : ''}`}>
+          <li><Link to="/hackathon"           className={isActive('/hackathon')}          onClick={closeNav}>Home</Link></li>
+          <li><Link to="/hackathon/projects"  className={isActive('/hackathon/projects')} onClick={closeNav}>Projects</Link></li>
+          <li><Link to="/hackathon/rules"     className={isActive('/hackathon/rules')}    onClick={closeNav}>Rules &amp; Scoring</Link></li>
+          <li><Link to="/hackathon/schedule"  className={isActive('/hackathon/schedule')} onClick={closeNav}>Schedule</Link></li>
           <a
-          href="https://go.hawaii.edu/EUD"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.registerBtn}
+            href="https://go.hawaii.edu/EUD"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.registerBtn}
           >
-          Register
-        </a>
-
-        </div>
+            Register
+          </a>
+        </ul>
       </div>
     </nav>
   );

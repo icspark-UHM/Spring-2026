@@ -1,105 +1,172 @@
-/* ==================== */
-/* HACKATHON NAVIGATION */
-/* ==================== */
+/* ============================================================ */
+/* HACKNAV.MODULE.CSS                                           */
+/* ============================================================ */
 
-.hackathonNav {
-  background: rgba(26, 31, 46, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid var(--hackathon-accent);
+.nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 1rem 0;
+  background: rgb(10, 21, 39);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(238, 239, 243, 0.15);
 }
 
-.navContainer {
+.inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  height: 60px;
 }
 
-.navBrand .backLink {
-  color: var(--hackathon-accent);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-}
-
-.navBrand .backLink:hover {
-  color: #fff;
-  transform: translateX(-5px);
-}
-
-.navLinks {
+/* Brand */
+.brand {
   display: flex;
-  gap: 2rem;
-}
-
-.navLink {
-  color: #fff;
+  align-items: center;
+  gap: 0.4rem;
   text-decoration: none;
-  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.brandMain {
   font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  position: relative;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
 }
 
-.navLink::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
+.brandSep {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1rem;
+}
+
+.brandSub {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffcc00;
+}
+
+/* Nav links */
+.links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.links a {
+  display: block;
+  padding: 0.4rem 0.85rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+  /*font-weight: 600;*/
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.links a:hover {
+  color: #fff;
+  background: rgb(193, 78, 53);
+}
+
+.links a.active {
+  color: #ffcc00;
+  background: rgba(255, 204, 0, 0.1);
+}
+
+/* Hamburger button */
+.toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.toggle span {
+  display: block;
+  width: 22px;
   height: 2px;
-  background: var(--hackathon-accent);
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
 }
 
-.navLink:hover {
-  color: var(--hackathon-accent);
-  background: rgba(0, 217, 255, 0.1);
+/* Animate hamburger → X */
+.toggleOpen span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.toggleOpen span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.toggleOpen span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
-.navLink:hover::after {
-  width: 80%;
-}
-
-/* ==================== */
-/* RESPONSIVE           */
-/* ==================== */
-
-@media (max-width: 768px) {
-  .navLinks {
-    gap: 1rem;
+/* ============================================================ */
+/* RESPONSIVE                                                   */
+/* ============================================================ */
+@media (max-width: 720px) {
+  .toggle {
+    display: flex;
   }
 
-  .navLink {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .navContainer {
+  .links {
+    /* Hidden by default on mobile */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(3, 10, 20, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(238, 239, 243, 0.15);
     flex-direction: column;
-    gap: 1rem;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem 0;
+
+    /* Animate in/out */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.3s ease, opacity 0.25s ease;
   }
 
-  .navLinks {
-    flex-wrap: wrap;
-    justify-content: center;
+  .links.open {
+    max-height: 400px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .links a {
+    padding: 0.85rem 1.5rem;
+    border-radius: 0;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .links li:last-child a {
+    border-bottom: none;
   }
 }
 
 .registerBtn {
-  background: #ffcc00;
+  background: #0f596f;
   color: #030a14;
   padding: 0.5rem 1.25rem;
   border-radius: 50px;
@@ -110,6 +177,7 @@
 
 .registerBtn:hover {
   background: #fff;
-  color: #030a14;
+  color: #0f596f;
   transform: scale(1.05);
 }
+
