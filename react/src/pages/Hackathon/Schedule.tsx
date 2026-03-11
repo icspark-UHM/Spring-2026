@@ -26,24 +26,24 @@ function HackathonSchedule() {
               <h3>Our Venue</h3>
 
               <img
-                src='imgs/hackathon/Parking.png'
+                src='imgs/hackathon/venue.png'
                 alt="Hackathon Venue Map"
                 style={{ width: '100%', height: 'auto', borderRadius: '8px', margin: '1rem 0' }}
               />
 
               <div className={styles.mapLegend} style={{ margin: '1rem 0' }}>
-                <p>⭐ <strong>Star:</strong> Campus Center Ballroom (3rd Floor)</p>
+                <p>⭐ <strong>Star:</strong> Pacific Ocean Science & Technology (POST) Building</p>
                 <p>📍 <strong>Red Pin:</strong> Recommended Parking</p>
               </div>
 
               <h4 style={{ fontSize: '1.1rem', margin: '0.75rem 0 0.25rem' }}>
-                Campus Center Ballroom, 3rd Floor
+                Pacific Ocean Science & Technology | Room 318A (3rd Floor)
               </h4>
               <p style={{ color: '#ffcc00', margin: '0.25rem 0' }}>
                 Subject to change — will notify if building location changes.
               </p>
               <p style={{ margin: '0.5rem 0' }}>
-                2465 Campus Rd, Honolulu, HI 96822 · University of Hawaiʻi at Mānoa
+                1680 East-West Rd, Honolulu, HI 96822 · University of Hawaiʻi at Mānoa
               </p>
             </div>
 
